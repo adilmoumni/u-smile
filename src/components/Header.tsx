@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -17,6 +17,17 @@ const navLinks = [
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileOpen]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -138,13 +149,32 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile drawer */}
+        {/* Mobile fullscreen menu */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-500 ${
-            mobileOpen ? "max-h-[600px] border-t border-foreground/5" : "max-h-0"
+          className={`lg:hidden fixed inset-0 z-[60] bg-[#393939] transition-opacity duration-500 pt-6 flex flex-col ${
+            mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
           }`}
         >
-          <div className="px-6 py-6 space-y-1 bg-white">
+          <div className="flex-1 overflow-y-auto px-6 pb-6 space-y-1 relative">
+            {/* Close Button */}
+            <button
+              onClick={() => setMobileOpen(false)}
+              className="absolute top-0 right-0 p-2 text-white/80 hover:text-white transition-colors"
+              aria-label="Fermer le menu"
+            >
+              <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <div className="mb-10 mt-2 flex justify-center">
+              <Image
+                src="/images/logos/USMILE LOGO Horizontal - White.svg"
+                alt="U-Smile Orthodontie"
+                width={140}
+                height={40}
+              />
+            </div>
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -154,14 +184,71 @@ export default function Header() {
                   onClick={() => setMobileOpen(false)}
                   className={`block rounded-xl px-4 py-3 text-sm font-medium transition-all ${
                     isActive
-                      ? "bg-black text-white"
-                      : "text-black hover:bg-black/5"
+                      ? "bg-white text-black"
+                      : "text-white/80 hover:bg-white/10 hover:text-white"
                   }`}
                 >
                   {link.label}
                 </a>
               );
             })}
+            
+            {/* Mobile Contact Info */}
+            <div className="mt-8 pt-8 border-t border-white/10 space-y-6">
+              <div className="space-y-3 text-sm text-white/60 leading-relaxed">
+                <p>
+                  6 Rue Abou Zaid Eddaboussi, Vélodrome.
+                  <br />
+                  Casablanca, 20000
+                </p>
+                <p>
+                  Rés Malak 4 – 1<sup>er</sup> Étage Bureau N° 15 –
+                  <br />
+                  Bouskoura Ville Verte
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-3">
+                <a
+                  href="tel:+212700722556"
+                  className="flex items-center gap-2.5 text-sm text-white/80 hover:text-white transition-colors"
+                >
+                  <svg
+                    className="w-4 h-4 shrink-0 text-white/50"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                    />
+                  </svg>
+                  (212) 700-722556
+                </a>
+                <a
+                  href="mailto:contact@usmile.com"
+                  className="flex items-center gap-2.5 text-sm text-white/80 hover:text-white transition-colors"
+                >
+                  <svg
+                    className="w-4 h-4 shrink-0 text-white/50"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                    />
+                  </svg>
+                  contact@usmile.com
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
