@@ -33,11 +33,11 @@ export default function TestimonialsSection() {
     <section id="testimonials" className="bg-[#fdfcfb] py-24 lg:py-32 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-16">
-          <span className="inline-block rounded-full bg-spearmint/10 border border-spearmint/20 px-4 py-1.5 text-xs font-semibold tracking-wider text-spearmint uppercase mb-6">
+          <span className="inline-block rounded-lg bg-white border-[0.5px] text-dark-taupe px-4 py-1.5 text-xs font-semibold tracking-wider text-dark-taupe uppercase mb-6">
             TÉMOIGNAGES
           </span>
           <h2 className="text-4xl sm:text-5xl font-light text-dark-taupe leading-tight font-serif">
-            Nos patients <span className="italic">satisfaits</span>
+            Nos patients satisfaits
           </h2>
         </div>
 
@@ -58,7 +58,7 @@ export default function TestimonialsSection() {
                 </div>
                 
                 <div className="relative z-10 pt-10">
-                  <p className="text-lg lg:text-xl text-dark-taupe/80 leading-relaxed font-light mb-10 italic">
+                  <p className="text-lg lg:text-xl text-dark-taupe/80 leading-relaxed font-light mb-10">
                     &ldquo; {t.text} &rdquo;
                   </p>
                 </div>

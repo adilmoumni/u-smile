@@ -1,0 +1,94 @@
+[debug] [2026-03-09T21:16:16.641Z] ----------------------------------------------------------------------
+[debug] [2026-03-09T21:16:16.646Z] Command:       /opt/homebrew/Cellar/node/25.6.1/bin/node /opt/homebrew/bin/firebase deploy --only hosting
+[debug] [2026-03-09T21:16:16.646Z] CLI Version:   15.6.0
+[debug] [2026-03-09T21:16:16.646Z] Platform:      darwin
+[debug] [2026-03-09T21:16:16.646Z] Node Version:  v25.6.1
+[debug] [2026-03-09T21:16:16.646Z] Time:          Mon Mar 09 2026 21:16:16 GMT+0000 (GMT+00:00)
+[debug] [2026-03-09T21:16:16.646Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-03-09T21:16:17.217Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-09T21:16:17.217Z] > authorizing via signed-in user (moumniadil08@gmail.com)
+[debug] [2026-03-09T21:16:17.217Z] [iam] checking project u-smile-cabinet for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-03-09T21:16:17.217Z] Checked if tokens are valid: true, expires at: 1773094073598
+[debug] [2026-03-09T21:16:17.217Z] Checked if tokens are valid: true, expires at: 1773094073598
+[debug] [2026-03-09T21:16:17.218Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/u-smile-cabinet:testIamPermissions [none]
+[debug] [2026-03-09T21:16:17.218Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/u-smile-cabinet:testIamPermissions  x-goog-user-project=u-smile-cabinet
+[debug] [2026-03-09T21:16:17.218Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/u-smile-cabinet:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-03-09T21:16:18.306Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/u-smile-cabinet:testIamPermissions 200
+[debug] [2026-03-09T21:16:18.306Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/u-smile-cabinet:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-03-09T21:16:18.306Z] Checked if tokens are valid: true, expires at: 1773094073598
+[debug] [2026-03-09T21:16:18.306Z] Checked if tokens are valid: true, expires at: 1773094073598
+[debug] [2026-03-09T21:16:18.306Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/u-smile-cabinet [none]
+[debug] [2026-03-09T21:16:18.828Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/u-smile-cabinet 200
+[debug] [2026-03-09T21:16:18.829Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/u-smile-cabinet {"projectId":"u-smile-cabinet","projectNumber":"803082667615","displayName":"u-smile-cabinet","name":"projects/u-smile-cabinet","resources":{"hostingSite":"u-smile-cabinet"},"state":"ACTIVE","etag":"1_1aa72781-f68a-457f-ab0f-cb1415e535ef"}
+[info] 
+[info] === Deploying to 'u-smile-cabinet'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-03-09T21:16:18.831Z] Checked if tokens are valid: true, expires at: 1773094073598
+[debug] [2026-03-09T21:16:18.831Z] Checked if tokens are valid: true, expires at: 1773094073598
+[debug] [2026-03-09T21:16:18.831Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/u-smile-cabinet/versions [none]
+[debug] [2026-03-09T21:16:18.831Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/u-smile-cabinet/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-03-09T21:16:21.887Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/u-smile-cabinet/versions 500
+[debug] [2026-03-09T21:16:21.888Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/u-smile-cabinet/versions {"error":{"code":500,"message":"Internal error encountered.","status":"INTERNAL"}}
+[error] 
+[error] Error: Request to https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/u-smile-cabinet/versions had HTTP Error: 500, Internal error encountered.
+[debug] [2026-03-09T21:16:22.121Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500
+  }
+}
+[debug] [2026-03-09T21:16:50.428Z] ----------------------------------------------------------------------
+[debug] [2026-03-09T21:16:50.433Z] Command:       /opt/homebrew/Cellar/node/25.6.1/bin/node /opt/homebrew/bin/firebase deploy --only hosting
+[debug] [2026-03-09T21:16:50.434Z] CLI Version:   15.6.0
+[debug] [2026-03-09T21:16:50.434Z] Platform:      darwin
+[debug] [2026-03-09T21:16:50.434Z] Node Version:  v25.6.1
+[debug] [2026-03-09T21:16:50.434Z] Time:          Mon Mar 09 2026 21:16:50 GMT+0000 (GMT+00:00)
+[debug] [2026-03-09T21:16:50.434Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-03-09T21:16:51.015Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-09T21:16:51.015Z] > authorizing via signed-in user (moumniadil08@gmail.com)
+[debug] [2026-03-09T21:16:51.015Z] [iam] checking project u-smile-cabinet for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-03-09T21:16:51.016Z] Checked if tokens are valid: true, expires at: 1773094073598
+[debug] [2026-03-09T21:16:51.016Z] Checked if tokens are valid: true, expires at: 1773094073598
+[debug] [2026-03-09T21:16:51.016Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/u-smile-cabinet:testIamPermissions [none]
+[debug] [2026-03-09T21:16:51.016Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/u-smile-cabinet:testIamPermissions  x-goog-user-project=u-smile-cabinet
+[debug] [2026-03-09T21:16:51.016Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/u-smile-cabinet:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-03-09T21:16:51.816Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/u-smile-cabinet:testIamPermissions 200
+[debug] [2026-03-09T21:16:51.816Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/u-smile-cabinet:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-03-09T21:16:51.816Z] Checked if tokens are valid: true, expires at: 1773094073598
+[debug] [2026-03-09T21:16:51.816Z] Checked if tokens are valid: true, expires at: 1773094073598
+[debug] [2026-03-09T21:16:51.817Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/u-smile-cabinet [none]
+[debug] [2026-03-09T21:16:52.265Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/u-smile-cabinet 200
+[debug] [2026-03-09T21:16:52.265Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/u-smile-cabinet {"projectId":"u-smile-cabinet","projectNumber":"803082667615","displayName":"u-smile-cabinet","name":"projects/u-smile-cabinet","resources":{"hostingSite":"u-smile-cabinet"},"state":"ACTIVE","etag":"1_1aa72781-f68a-457f-ab0f-cb1415e535ef"}
+[info] 
+[info] === Deploying to 'u-smile-cabinet'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-03-09T21:16:52.268Z] Checked if tokens are valid: true, expires at: 1773094073598
+[debug] [2026-03-09T21:16:52.268Z] Checked if tokens are valid: true, expires at: 1773094073598
+[debug] [2026-03-09T21:16:52.268Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/u-smile-cabinet/versions [none]
+[debug] [2026-03-09T21:16:52.268Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/u-smile-cabinet/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-03-09T21:16:54.757Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/u-smile-cabinet/versions 500
+[debug] [2026-03-09T21:16:54.757Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/u-smile-cabinet/versions {"error":{"code":500,"message":"Internal error encountered.","status":"INTERNAL"}}
+[error] 
+[error] Error: Request to https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/u-smile-cabinet/versions had HTTP Error: 500, Internal error encountered.
+[debug] [2026-03-09T21:16:54.937Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500
+  }
+}

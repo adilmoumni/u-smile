@@ -21,7 +21,7 @@ export default function AppointmentForm() {
           <div className="flex-1 p-8 lg:p-16 flex flex-col justify-center">
             <div className="max-w-xl">
               <h2 className="text-3xl lg:text-4xl font-normal text-dark-taupe mb-10 tracking-tight uppercase">
-                PRENDRE <span className="italic font-bold">RENDEZ-VOUS</span>
+                PRENDRE RENDEZ-VOUS
               </h2>
 
               <form className="space-y-6">

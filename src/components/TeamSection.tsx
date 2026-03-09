@@ -21,26 +21,14 @@ function DoctorProfile({ name, titles, bio, image, isReversed }: DoctorProfilePr
       {/* Left: Image with Stylized U */}
       <div className="relative w-full lg:w-1/2 flex justify-center">
         <div className="relative w-full max-w-[500px] aspect-square">
-          {/* Stylized U Background - Using the brand logo as a watermark/mask effect */}
-          <div className="absolute inset-0 z-0 opacity-20 transform translate-x-[-10%] scale-110 select-none pointer-events-none">
-            <Image
-              src="/images/logos/USMILE LOGO Cicrular - Dark Taupe.svg"
-              alt=""
-              fill
-              className="object-contain"
-            />
-          </div>
-          
           {/* Doctor Portrait */}
-          <div className="relative z-10 w-full h-full rounded-[2.5rem] lg:rounded-[4rem] overflow-hidden shadow-2xl">
-            <Image
-              src={image}
-              alt={name}
-              fill
-              className="object-cover object-top hover:scale-105 transition-transform duration-700"
-            />
-          </div>
-          
+          <Image
+            src={image}
+            alt={name}
+            fill
+            className="object-cover object-top hover:scale-105 transition-transform duration-700"
+          />
+
           {/* Decorative element - Small spearmint circle */}
           <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-spearmint/10 rounded-full blur-2xl z-0"></div>
         </div>
@@ -51,7 +39,7 @@ function DoctorProfile({ name, titles, bio, image, isReversed }: DoctorProfilePr
         <div className="max-w-2xl">
           <h2 className="text-4xl lg:text-5xl font-light text-[#393939] mb-8 leading-tight font-serif">
             {firstName} <br />
-            <span className="text-[#393939]/80 italic">{lastName}</span>
+            <span className="text-[#393939]/80">{lastName}</span>
           </h2>
 
           <div className="space-y-6">
@@ -77,8 +65,8 @@ function DoctorProfile({ name, titles, bio, image, isReversed }: DoctorProfilePr
   );
 }
 
-export default function TeamSection() {
-  const doctors = [
+export default function TeamSection({ doctorName }: { doctorName?: string }) {
+  const allDoctors = [
     {
       name: "Dr Charafa Bennis Hamoumi",
       titles: [
@@ -101,14 +89,18 @@ export default function TeamSection() {
         "Diplômée de la FGSOCO Paris"
       ],
       bio: [
-        "Le Dr Lina Hamoumi Khanoufi exerce l’orthodontie avec une vision résolument moderne, précise et personnalisée. Formée aux approches les plus avancées, elle a complété son parcours par un Master Invisalign à Paris, un Master Expert Invisalign, un Master en Réhabilitation Neuro-Occlusale (RNO) à Valence ainsi qu’un Master DAMON à Madrid, consolidant ainsi une expertise approfondie en orthodontie digitale et fonctionnelle.",
+        "Le Dr Lina Hamoumi Khanoufi exerce l’orthodontie avec une vision résolument moderne, précise et personnalisée. Formée aux approches les plus avancées, elle a completé son parcours par un Master Invisalign à Paris, un Master Expert Invisalign, un Master en Réhabilitation Neuro-Occlusale (RNO) à Valence ainsi qu’un Master DAMON à Madrid, consolidant ainsi une expertise approfondie en orthodontie digitale et fonctionnelle.",
         "Depuis 2022, elle met en œuvre une approche orthodontique intégrative, prenant en considération l’équilibre oro-facial, la fonction, l’esthétique du sourire et l’harmonie globale du visage. Chaque plan de traitement est conçu avec rigueur et précision, alliant analyse numérique avancée et décision clinique réfléchie, toujours guidée par une vision médicale avant tout humaine.",
         "Forte de plus de trois années d’expérience au sein de U.smile Orthodontie à Casa Anfa, elle s’inscrit dans la continuité d’une orthodontie d’excellence, moderne et personnalisée, où innovation technologique et exigence clinique avancent de pair."
       ],
       image: "/images/team/dr-lina.jpeg",
-      isReversed: true
+      isReversed: false
     }
   ];
+
+  const doctors = doctorName 
+    ? allDoctors.filter(d => d.name.toLowerCase().includes(doctorName.toLowerCase()))
+    : allDoctors;
 
   return (
     <section id="team" className="bg-white py-24 lg:py-32 overflow-hidden">

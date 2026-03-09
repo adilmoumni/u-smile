@@ -1,8 +1,11 @@
 import Image from "next/image";
 
 const quickLinks = [
-  { label: "Le Cabinet", href: "#about" },
-  { label: "Nos Soins", href: "#services" },
+  { label: "Le Cabinet", href: "/le-cabinet" },
+  { label: "Nos Soins", href: "/nos-soins" },
+  { label: "Notre Équipe", href: "/notre-equipe" },
+  { label: "Nos Équipements", href: "/nos-equipements" },
+  { label: "Nos Sourires", href: "/nos-sourires" },
   { label: "U.Smile Formations", href: "#formations" },
 ];
 
@@ -38,7 +41,7 @@ export default function Footer() {
             {/* Partner logos (text placeholders matching the reference) */}
             <div className="mt-4 flex flex-col gap-4">
               <div className="flex items-center gap-2">
-                <span className="text-lg font-bold italic text-white/60 tracking-tight">
+                <span className="text-lg font-bold text-white/60 tracking-tight">
                   iTero
                 </span>
                 <span className="text-[9px] uppercase tracking-wider text-white/35 leading-tight block">
@@ -66,7 +69,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-white/60 hover:text-spearmint-light transition-colors duration-300"
+                    className="text-sm text-white/60 hover:text-white transition-colors duration-300"
                   >
                     {link.label}
                   </a>
@@ -84,8 +87,8 @@ export default function Footer() {
               {services.map((service) => (
                 <li key={service}>
                   <a
-                    href="#services"
-                    className="text-sm text-white/60 hover:text-spearmint-light transition-colors duration-300"
+                    href="/nos-soins"
+                    className="text-sm text-white/60 hover:text-white transition-colors duration-300"
                   >
                     {service}
                   </a>
@@ -119,7 +122,7 @@ export default function Footer() {
               <div className="flex flex-col gap-1.5">
                 <a
                   href="tel:+212700722556"
-                  className="flex items-center gap-2.5 text-sm text-white/60 hover:text-spearmint-light transition-colors"
+                  className="flex items-center gap-2.5 text-sm text-white/60 hover:text-white transition-colors"
                 >
                   <svg
                     className="w-4 h-4 shrink-0 text-white/35"
@@ -138,7 +141,7 @@ export default function Footer() {
                 </a>
                 <a
                   href="tel:+212522396210"
-                  className="flex items-center gap-2.5 text-sm text-white/60 hover:text-spearmint-light transition-colors pl-[26px]"
+                  className="flex items-center gap-2.5 text-sm text-white/60 hover:text-white transition-colors pl-[26px]"
                 >
                   (212) 522-396210
                 </a>

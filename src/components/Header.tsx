@@ -2,25 +2,29 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { label: "Le Cabinet", href: "#about" },
-  { label: "Notre Équipe", href: "#team" },
-  { label: "Nos Équipements", href: "#equipments" },
-  { label: "Nos Soins", href: "#services" },
-  { label: "Nos Sourires", href: "#smiles" },
+  { label: "Le Cabinet", href: "/le-cabinet" },
+  { label: "Notre Équipe", href: "/notre-equipe" },
+  { label: "Nos Équipements", href: "/nos-equipements" },
+  { label: "Nos Soins", href: "/nos-soins" },
+  { label: "Nos Sourires", href: "/nos-sourires" },
+  { label: "U.Smile Formations", href: "/u-smile-formations" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* ── Top Info Bar ── */}
-      <div className="bg-[#96928E] text-white text-xs">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-8">
+      <div className="bg-[#96928E] text-white text-[10px] sm:text-xs">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-2">
           {/* Phone numbers */}
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-3 sm:gap-5">
             <a
               href="tel:+212700722556"
               className="flex items-center gap-1.5 hover:text-white transition-colors"
@@ -66,65 +70,48 @@ export default function Header() {
                 d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <span className="uppercase tracking-wider">
+            <span className="uppercase tracking-wider text-[10px]">
               Lundi – Vendredi
             </span>
             <span className="w-8 h-px bg-white/30" />
-            <span>8:30 – 18H30</span>
+            <span className="text-[10px]">8:30 – 18H30</span>
           </div>
         </div>
       </div>
 
       {/* ── Main Navigation Bar ── */}
-      <nav className="bg-white dark:bg-[#1c1b18] border-b border-foreground/5">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
+      <nav className="bg-white border-b border-foreground/5">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
           {/* Logo */}
           <a href="/" className="shrink-0">
             <Image
               src="/images/logos/USMILE LOGO Horizontal - Dark Taupe.svg"
               alt="U-Smile Orthodontie"
-              width={150}
-              height={44}
-              className="dark:hidden"
+              width={140}
+              height={40}
               priority
-            />
-            <Image
-              src="/images/logos/USMILE LOGO Horizontal - White.svg"
-              alt="U-Smile Orthodontie"
-              width={150}
-              height={44}
-              className="hidden dark:block"
-              priority
+              className="lg:w-[150px] lg:h-[44px]"
             />
           </a>
 
           {/* Desktop nav links */}
-          <div className="hidden lg:flex items-center gap-7">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-[13px] font-medium uppercase tracking-[0.06em] text-foreground/65 hover:text-foreground transition-colors duration-300"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-
-          {/* Right side: CTA + FAQ */}
-          <div className="hidden lg:flex items-center gap-3">
-            <a
-              href="#formations"
-              className="rounded-full bg-dark-taupe dark:bg-white/10 px-5 py-2 text-[12px] font-semibold uppercase tracking-wider text-white hover:bg-dark-taupe/85 dark:hover:bg-white/20 transition-all duration-300"
-            >
-              U.Smile Formations
-            </a>
-            <a
-              href="#faq"
-              className="text-[13px] font-medium uppercase tracking-[0.06em] text-foreground/65 hover:text-foreground transition-colors duration-300 px-2"
-            >
-              FAQ
-            </a>
+          <div className="hidden lg:flex items-center gap-2 xl:gap-4">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className={`px-4 py-2 text-[12px] font-medium uppercase tracking-[0.05em] transition-all duration-300 rounded-lg ${
+                    isActive 
+                      ? "bg-black text-white" 
+                      : "text-black hover:text-accent"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              );
+            })}
           </div>
 
           {/* Mobile hamburger */}
@@ -154,34 +141,27 @@ export default function Header() {
         {/* Mobile drawer */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-500 ${
-            mobileOpen ? "max-h-[500px] border-t border-foreground/5" : "max-h-0"
+            mobileOpen ? "max-h-[600px] border-t border-foreground/5" : "max-h-0"
           }`}
         >
-          <div className="px-6 py-6 space-y-1 bg-white dark:bg-[#1c1b18]">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="block rounded-xl px-4 py-3 text-sm font-medium text-foreground/70 hover:bg-spearmint/5 hover:text-accent transition-all"
-              >
-                {link.label}
-              </a>
-            ))}
-            <div className="pt-3 border-t border-foreground/5 mt-3 flex flex-col gap-2">
-              <a
-                href="#formations"
-                className="block rounded-xl bg-dark-taupe px-4 py-3 text-sm font-semibold text-white text-center"
-              >
-                U.Smile Formations
-              </a>
-              <a
-                href="#faq"
-                className="block rounded-xl px-4 py-3 text-sm font-medium text-foreground/70 text-center hover:bg-foreground/5 transition-all"
-              >
-                FAQ
-              </a>
-            </div>
+          <div className="px-6 py-6 space-y-1 bg-white">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`block rounded-xl px-4 py-3 text-sm font-medium transition-all ${
+                    isActive
+                      ? "bg-black text-white"
+                      : "text-black hover:bg-black/5"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              );
+            })}
           </div>
         </div>
       </nav>

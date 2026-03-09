@@ -20,8 +20,8 @@
   /* Semantic */
   --background: #fdfcfb; /* Soft light background for the layout */
   --foreground: var(--color-charcoal);
-  --accent: var(--color-spearmint);
-  --accent-hover: var(--color-spearmint-dark);
+  --accent: var(--color-dark-taupe);
+  --accent-hover: var(--color-charcoal);
   --muted: var(--color-soft-grey);
   --card-bg: var(--color-white);
 }
@@ -29,7 +29,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: white;
-    --foreground: #ede9e2;
+    --foreground: #393939;
     --card-bg: #1c1b18;
     --muted: #6b665e;
   }

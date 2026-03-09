@@ -59,7 +59,7 @@ export default function ServicesSection() {
             NOS SOINS
           </span>
           <h2 className="text-4xl sm:text-5xl font-light text-white leading-tight font-serif max-w-2xl">
-            Accompagner <span className="italic font-bold">le sourire</span> à chaque étape de la vie.
+            Accompagner le sourire à chaque étape de la vie.
           </h2>
         </div>
 
