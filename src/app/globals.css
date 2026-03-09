@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────
+   U-Smile Brand Tokens
+   ───────────────────────────────────────────── */
+
+:root {
+  /* Brand palette – dental / clinical elegance */
+  --color-spearmint: #7ec8a4;
+  --color-spearmint-light: #a8dcc3;
+  --color-spearmint-dark: #5ba882;
+  --color-dark-taupe: #4a3f35;
+  --color-warm-taupe: #a59c94; /* Soft taupe from hero reference */
+  --color-warm-cream: #faf7f2;
+  --color-warm-cream-dark: #f0ebe3;
+  --color-charcoal: #2c2c2c;
+  --color-soft-grey: #b5b0a8;
+  --color-white: #ffffff;
+
+  /* Semantic */
+  --background: #fdfcfb; /* Soft light background for the layout */
+  --foreground: var(--color-charcoal);
+  --accent: var(--color-spearmint);
+  --accent-hover: var(--color-spearmint-dark);
+  --muted: var(--color-soft-grey);
+  --card-bg: var(--color-white);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: white;
+    --foreground: #ede9e2;
+    --card-bg: #1c1b18;
+    --muted: #6b665e;
+  }
+}
+
+/* ── Tailwind theme extension ── */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-muted: var(--muted);
+  --color-card: var(--card-bg);
+  --color-spearmint: var(--color-spearmint);
+  --color-spearmint-light: var(--color-spearmint-light);
+  --color-spearmint-dark: var(--color-spearmint-dark);
+  --color-dark-taupe: var(--color-dark-taupe);
+  --color-warm-cream: var(--color-warm-cream);
+
+  --font-serif: var(--font-ivy-presto);
+  --font-sans: var(--font-sofia-pro);
+}
+
+/* ── Global resets & defaults ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sofia-pro), "Segoe UI", system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-ivy-presto), Georgia, serif;
+  line-height: 1.15;
+}
+
+/* ── Utility animations ── */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out both;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
+
+/* ── Smooth gradient background helper ── */
+.gradient-hero {
+  background: linear-gradient(
+    160deg,
+    var(--color-warm-cream) 0%,
+    #e8f5ee 40%,
+    var(--color-spearmint-light) 100%
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  .gradient-hero {
+    background: linear-gradient(
+      160deg,
+      #121210 0%,
+      #1a2a20 40%,
+      #1e3a2a 100%
+    );
+  }
+}
