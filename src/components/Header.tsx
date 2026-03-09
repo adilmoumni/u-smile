@@ -16,7 +16,28 @@ const navLinks = [
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const pathname = usePathname();
+
+  // Handle scroll behavior to hide/show header
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Hide header if scrolling down and past the very top (e.g. 50px)
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   useEffect(() => {
     if (mobileOpen) {
@@ -30,7 +51,11 @@ export default function Header() {
   }, [mobileOpen]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
+        isVisible || mobileOpen ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       {/* ── Top Info Bar ── */}
       <div className="bg-[#96928E] text-white text-[10px] sm:text-xs">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-2">
@@ -151,15 +176,15 @@ export default function Header() {
 
         {/* Mobile fullscreen menu */}
         <div
-          className={`lg:hidden fixed inset-0 z-[60] bg-[#393939] transition-opacity duration-500 pt-6 flex flex-col ${
+          className={`lg:hidden fixed top-0 left-0 w-full h-[100dvh] z-[60] bg-[#393939] transition-opacity duration-500 pt-[env(safe-area-inset-top,1.5rem)] flex flex-col ${
             mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
           }`}
         >
-          <div className="flex-1 overflow-y-auto px-6 pb-6 space-y-1 relative">
+          <div className="flex-1 overflow-y-auto px-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] space-y-1 relative">
             {/* Close Button */}
             <button
               onClick={() => setMobileOpen(false)}
-              className="absolute top-0 right-0 p-2 text-white/80 hover:text-white transition-colors"
+              className="absolute top-2 right-0 p-2 text-white/80 hover:text-white transition-colors z-10"
               aria-label="Fermer le menu"
             >
               <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -167,7 +192,7 @@ export default function Header() {
               </svg>
             </button>
 
-            <div className="mb-10 mt-2 flex justify-center">
+            <div className="mb-10 mt-6 flex justify-center">
               <Image
                 src="/images/logos/USMILE LOGO Horizontal - White.svg"
                 alt="U-Smile Orthodontie"
