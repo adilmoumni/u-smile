@@ -7,12 +7,12 @@ const ivyPresto = localFont({
   variable: "--font-ivy-presto",
   src: [
     {
-      path: "../../public/fonts/ivy-presto/ivy-presto-headline-thin.otf",
+      path: "../../public/fonts/ivy-presto/ivy-presto-text-thin.otf",
       weight: "100",
       style: "normal",
     },
     {
-      path: "../../public/fonts/ivy-presto/ivy-presto-headline.otf",
+      path: "../../public/fonts/ivy-presto/ivy-presto-text.otf",
       weight: "400",
       style: "normal",
     },

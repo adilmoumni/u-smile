@@ -19,16 +19,16 @@ export default function Home() {
          ═══════════════════════════════════════════════ */}
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden rounded-[1rem] lg:rounded-[1rem] bg-[#a59c94] min-h-[600px] flex flex-col lg:flex-row shadow-2xl shadow-dark-taupe/10">
+          <div className="relative overflow-hidden rounded-[1rem] lg:rounded-[1rem] bg-[#A0938B] min-h-[600px] flex flex-col lg:flex-row shadow-2xl shadow-dark-taupe/10">
             {/* Left – Text Side (Taupe) */}
-            <div className="flex-1 p-10 lg:p-20 flex flex-col justify-center relative z-10">
+            <div className="flex-1 p-10 lg:pl-20 lg:pr-10 flex flex-col justify-center relative z-10">
               <div className="animate-fade-in-up">
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-normal text-white leading-[1.05] tracking-tight mb-8">
-                  Votre plus beau
-                  <br />
-                  <span className="font-light">Smile</span> commence
-                  <br />
-                  Avec nous
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl text-white mb-8 leading-[1.1] font-normal not-italic">
+                  <span className="block whitespace-nowrap">Votre plus beau</span>
+                  <span className="block whitespace-nowrap">
+                    <span className="italic font-semibold">Smile</span> commence
+                  </span>
+                  <span className="block whitespace-nowrap">Avec nous</span>
                 </h1>
                 
                 <p className="text-white/90 text-lg lg:text-xl font-light max-w-md mb-12 leading-relaxed">
@@ -37,7 +37,7 @@ export default function Home() {
 
                 <a
                   href="#about"
-                  className="group inline-flex items-center gap-4 bg-[#2c2c2c] text-white px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-widest hover:bg-black transition-all duration-300 shadow-xl shadow-black/10 hover:shadow-black/20"
+                  className="group inline-flex items-center gap-4 bg-[#393939] text-white px-6 py-2 rounded-xl text-sm font-semibold uppercase tracking-widest hover:bg-black transition-all duration-300 shadow-xl shadow-black/10 hover:shadow-black/20"
                 >
                   A PROPOS
                   <svg 

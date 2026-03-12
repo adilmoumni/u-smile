@@ -37,15 +37,15 @@ function DoctorProfile({ name, titles, bio, image, isReversed }: DoctorProfilePr
       {/* Right: Content */}
       <div className="w-full lg:w-1/2 flex flex-col justify-center">
         <div className="max-w-2xl">
-          <h2 className="text-4xl lg:text-5xl font-light text-[#393939] mb-8 leading-tight font-serif">
-            {firstName} <br />
-            <span className="text-[#393939]/80">{lastName}</span>
+          <h2 className="text-4xl lg:text-5xl font-light text-[#96928E] mb-8 leading-tight font-serif">
+            <span className="font-bold">{firstName} </span><br />
+            <span className="text-[#96928E]">{lastName}</span>
           </h2>
 
           <div className="space-y-6">
             <div className="space-y-1">
               {titles.map((title, idx) => (
-                <p key={idx} className={`text-sm tracking-wide uppercase font-bold text-[#393939] ${idx === 0 ? '' : 'text-[#393939]/70'}`}>
+                <p key={idx} className={`text-sm tracking-wide uppercase font-bold text-[#393939] ${idx === 0 ? '' : 'text-[#393939]'}`}>
                   {title}
                 </p>
               ))}
@@ -79,7 +79,7 @@ export default function TeamSection({ doctorName }: { doctorName?: string }) {
         "Mentor et Speaker international Invisalign, elle s’investit également dans la transmission de son expertise à travers la direction de diplômes universitaires, contribuant activement au développement des meilleures pratiques en orthodontie digitale.",
         "Sa pratique repose sur une approche globale et intégrative, prenant en compte les fonctions oro-faciales, la posture, la croissance faciale, l'esthétique du sourire et l'équilibre du visage. Elle s'inscrit dans une orthodontie moderne, digitale et personnalisée, combinant analyse numérique avancée et planification 3D, tout en restant guidée par une exigence clinique rigoureuse, où la décision thérapeutique demeure avant tout humaine et médicale."
       ],
-      image: "/images/team/dr-charafa.jpeg",
+      image: "/images/team/dr-charafa.png",
       isReversed: false
     },
     {
@@ -93,7 +93,7 @@ export default function TeamSection({ doctorName }: { doctorName?: string }) {
         "Depuis 2022, elle met en œuvre une approche orthodontique intégrative, prenant en considération l’équilibre oro-facial, la fonction, l’esthétique du sourire et l’harmonie globale du visage. Chaque plan de traitement est conçu avec rigueur et précision, alliant analyse numérique avancée et décision clinique réfléchie, toujours guidée par une vision médicale avant tout humaine.",
         "Forte de plus de trois années d’expérience au sein de U.smile Orthodontie à Casa Anfa, elle s’inscrit dans la continuité d’une orthodontie d’excellence, moderne et personnalisée, où innovation technologique et exigence clinique avancent de pair."
       ],
-      image: "/images/team/dr-lina.jpeg",
+      image: "/images/team/dr-lina.png",
       isReversed: false
     }
   ];

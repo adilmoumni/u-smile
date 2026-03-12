@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
@@ -119,23 +120,23 @@ export default function Header() {
       <nav className="bg-white border-b border-foreground/5">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
           {/* Logo */}
-          <a href="/" className="shrink-0">
+          <Link href="/" className="shrink-0">
             <Image
-              src="/images/logos/USMILE LOGO Horizontal - Dark Taupe.svg"
+              src="/images/logos/USMILE LOGO Horizontal - Black_1.svg"
               alt="U-Smile Orthodontie"
               width={140}
-              height={40}
+              height={70}
               priority
-              className="lg:w-[150px] lg:h-[44px]"
+              className="lg:w-[150px] lg:h-[70px]"
             />
-          </a>
+          </Link>
 
           {/* Desktop nav links */}
           <div className="hidden lg:flex items-center gap-2 xl:gap-4">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   className={`px-4 py-2 text-[12px] font-medium uppercase tracking-[0.05em] transition-all duration-300 rounded-lg ${
@@ -145,7 +146,7 @@ export default function Header() {
                   }`}
                 >
                   {link.label}
-                </a>
+                </Link>
               );
             })}
           </div>
@@ -194,7 +195,7 @@ export default function Header() {
 
             <div className="mb-10 mt-6 flex justify-center">
               <Image
-                src="/images/logos/USMILE LOGO Horizontal - White.svg"
+                src="/images/logos/USMILE LOGO Horizontal - Black_1.svg"
                 alt="U-Smile Orthodontie"
                 width={140}
                 height={40}
@@ -203,7 +204,7 @@ export default function Header() {
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
@@ -214,7 +215,7 @@ export default function Header() {
                   }`}
                 >
                   {link.label}
-                </a>
+                </Link>
               );
             })}
             

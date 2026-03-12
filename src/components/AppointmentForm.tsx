@@ -6,7 +6,7 @@ export default function AppointmentForm() {
   return (
     <section id="contact" className="py-24 lg:py-32 bg-[#fdfcfb]">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-[0.5rem] bg-[#f0f9ff] flex flex-col lg:flex-row shadow-xl border border-blue-50">
+        <div className="relative overflow-hidden rounded-[0.5rem] bg-[#F0FBFF] flex flex-col lg:flex-row">
           {/* Left – Photo Side */}
           {/* roudned top right 4rem */}
           <div className="lg:w-[45%] relative min-h-[400px] lg:min-h-[600px]">
@@ -21,8 +21,8 @@ export default function AppointmentForm() {
           {/* Right – Form Side */}
           <div className="flex-1 p-8 lg:p-16 flex flex-col justify-center">
             <div className="max-w-xl">
-              <p className="text-3xl lg:text-4xl font-normal text-dark-taupe mb-10 tracking-tight uppercase">PRENDRE
-                <span className="font-italic">
+              <p className="text-3xl lg:text-4xl font-light text-dark-taupe mb-10 tracking-tight uppercase">PRENDRE
+                <span className="font-semibold p-2">
                   RENDEZ-VOUS
                 </span>
               </p>

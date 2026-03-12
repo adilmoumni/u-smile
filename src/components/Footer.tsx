@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const quickLinks = [
   { label: "Le Cabinet", href: "/le-cabinet" },
@@ -26,14 +27,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* ─── Column 1: Logo + Partner badges ─── */}
           <div className="flex flex-col gap-6">
-            <a href="/">
+            <Link href="/">
               <Image
                 src="/images/logos/USMILE LOGO Horizontal - White.svg"
                 alt="U-Smile Orthodontie"
                 width={145}
                 height={42}
               />
-            </a>
+            </Link>
             <span className="text-[11px] uppercase tracking-[0.15em] text-white/35 font-medium">
               Orthodontie
             </span>
@@ -67,12 +68,12 @@ export default function Footer() {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-white/60 hover:text-white transition-colors duration-300"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -86,12 +87,12 @@ export default function Footer() {
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
-                  <a
+                  <Link
                     href="/nos-soins"
                     className="text-sm text-white/60 hover:text-white transition-colors duration-300"
                   >
                     {service}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

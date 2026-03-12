@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -36,7 +37,7 @@ export default function TestimonialsSection() {
           <span className="inline-block rounded-lg bg-white border-[0.5px] text-dark-taupe px-4 py-1.5 text-xs font-semibold tracking-wider text-dark-taupe uppercase mb-6">
             TÉMOIGNAGES
           </span>
-          <h2 className="text-4xl sm:text-5xl font-light text-dark-taupe leading-tight font-serif">
+          <h2 className="text-4xl sm:text-5xl font-light text-dark-taupe leading-tight">
             Nos patients satisfaits
           </h2>
         </div>
@@ -51,14 +52,19 @@ export default function TestimonialsSection() {
             {testimonials.map((t, idx) => (
               <div
                 key={idx}
-                className="min-w-full sm:min-w-[450px] lg:min-w-[600px] snap-center bg-white rounded-[2.5rem] p-8 lg:p-12 shadow-xl border border-gray-50 relative flex flex-col justify-between"
+                className="min-w-full sm:min-w-[450px] lg:min-w-[600px] snap-center rounded-xl p-8 lg:p-12 bg-[#F4F5F7] relative flex flex-col justify-between"
               >
-                <div className="absolute top-10 left-10 text-spearmint/20">
-                  <Quote className="w-16 h-16 fill-current" />
+                <div className="absolute top-10 left-10">
+                 <Image
+                 src="/images/icon/quote.svg"
+                 alt="quote"
+                 width={56}
+                 height={47}
+                 />
                 </div>
                 
-                <div className="relative z-10 pt-10">
-                  <p className="text-lg lg:text-xl text-dark-taupe/80 leading-relaxed font-light mb-10">
+                <div className="relative z-10 pt-14">
+                  <p className="text-lg lg:text-xl text-[#393939] leading-relaxed font-light mb-10">
                     &ldquo; {t.text} &rdquo;
                   </p>
                 </div>
