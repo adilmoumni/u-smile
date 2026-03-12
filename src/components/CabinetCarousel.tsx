@@ -30,10 +30,10 @@ export default function CabinetCarousel() {
   }, []);
 
   return (
-    <section className="bg-white py-24 sm:py-32 overflow-hidden w-full">
-      <div className="relative w-full">
-        {/* Main Carousel Viewport */}
-        <div className="relative flex items-center justify-center h-[500px] sm:h-[700px] w-full overflow-hidden">
+    <section className="bg-white pt-32 pb-16 sm:pt-40 sm:pb-24 overflow-hidden w-full relative">
+      <div className="w-full">
+        {/* Main Carousel Viewport - Using 100vw to ensure full page width */}
+        <div className="relative flex items-center justify-center h-[500px] sm:h-[800px] w-screen left-1/2 -ml-[50vw]">
           {carouselImages.map((image, index) => {
             let offset = index - currentIndex;
             
@@ -46,24 +46,33 @@ export default function CabinetCarousel() {
 
             if (!isVisible) return null;
 
-            // Stacking and Scaling
-            const scale = isCenter ? 1 : 0.85;
-            const opacity = isCenter ? 1 : 0.6;
+            // Stacking and Scaling based on exact User Request:
+            // Center = 100% height (scale 1)
+            // Sides = 70% height (scale 0.7)
+            // Edge = 50% height (scale 0.5)
+            let scale = 1;
+            if (Math.abs(offset) === 1) scale = 0.7;
+            if (Math.abs(offset) === 2) scale = 0.5;
+
+            const opacity = 1 - Math.abs(offset) * 0.25;
             const zIndex = 30 - Math.abs(offset) * 10;
-            const translateX = offset * 25; // Smaller multiplier for overlap
+            
+            // vw-based translateX for consistent 100% width coverage
+            // Adjusted to 18vw to ensure 5 items are visible within the viewport
+            const translateX = offset * 18; 
 
             return (
               <div
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`absolute transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] cursor-pointer overflow-hidden rounded-[2rem] sm:rounded-[4rem] shadow-2xl ${
-                  isCenter ? "shadow-dark-taupe/20" : "shadow-none"
+                className={`absolute left-1/2 top-1/2 -translate-y-1/2 transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] cursor-pointer overflow-hidden rounded-2xl shadow-2xl ${
+                  isCenter ? "shadow-dark-taupe/30" : "shadow-none"
                 }`}
                 style={{
-                  transform: `translateX(${translateX}%) scale(${scale})`,
+                  transform: `translate(calc(-50% + ${translateX}vw), -50%) scale(${scale})`,
                   opacity: opacity,
                   zIndex: zIndex,
-                  width: "min(90%, 550px)",
+                  width: isCenter ? "min(90%, 550px)" : "min(80%, 450px)",
                   aspectRatio: "4/5",
                 }}
               >
@@ -71,7 +80,7 @@ export default function CabinetCarousel() {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className={`object-cover transition-all duration-700 ${!isCenter ? "blur-[2px] grayscale-[20%]" : ""}`}
+                  className={`object-cover transition-all duration-1000 ${!isCenter ? "blur-[2px] grayscale-[15%]" : ""}`}
                 />
               </div>
             );
@@ -79,7 +88,7 @@ export default function CabinetCarousel() {
         </div>
 
         {/* Navigation Dots */}
-        <div className="mt-12 sm:mt-20 flex justify-center items-center gap-4">
+        <div className="mt-2 sm:mt-4 flex justify-center items-center gap-4">
           {carouselImages.map((_, index) => (
             <button
               key={index}
@@ -90,8 +99,8 @@ export default function CabinetCarousel() {
               aria-label={`Go to slide ${index + 1}`}
             >
               <span 
-                className={`absolute inset-0 rounded-full border border-dark-taupe/30 transition-all duration-500 ${
-                  index === currentIndex ? "scale-[1.5] border-dark-taupe" : "scale-100"
+                className={`absolute inset-0 rounded-full border border-dark-taupe/40 transition-all duration-500 ${
+                  index === currentIndex ? "scale-[1.6] border-dark-taupe" : "scale-100"
                 }`}
               />
               <span 

@@ -45,22 +45,13 @@ export default function NotreEquipe() {
     <>
       <Header />
       
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="bg-white py-12 border-b border-foreground/5">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <h1 className="text-4xl lg:text-5xl font-light text-dark-taupe font-serif">
-               Notre Équipe
-            </h1>
-          </div>
-        </section>
-
+      <main className="pt-50">
         {/* Intro Visual */}
-        <section className="bg-white py-20 overflow-hidden">
+        <section className="bg-white py-5 overflow-hidden">
            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <div className="relative rounded-[3rem] lg:rounded-[5rem] bg-[#f8f7f5] p-12 lg:p-24 flex flex-col lg:flex-row items-center gap-16">
+              <div className="relative rounded-lg lg:rounded-lg bg-[#F2F2F2] px-20 flex flex-col lg:flex-row items-center gap-16">
                  <div className="flex-1">
-                    <h2 className="text-4xl lg:text-6xl font-light text-dark-taupe font-serif leading-tight mb-8">
+                    <h2 className="text-2xl lg:text-4xl font-light text-dark-taupe font-serif leading-tight mb-8">
                        Chez U.Smile Orthodontie,
                     </h2>
                     <p className="text-[#393939] font-light leading-relaxed text-lg max-w-2xl">
@@ -83,8 +74,8 @@ export default function NotreEquipe() {
         <div className="space-y-24 pb-24">
            {teamSections.map((section, idx) => (
               <section key={idx} className="mx-auto max-w-7xl px-6 lg:px-8">
-                 <div className="relative border border-dark-taupe/10 rounded-[2.5rem] lg:rounded-[4rem] bg-white p-12 lg:p-20 shadow-sm hover:shadow-xl transition-all duration-500">
-                    <div className="absolute -top-10 left-12 lg:left-20 w-20 h-20 bg-[#a59c94] rounded-3xl flex items-center justify-center shadow-lg">
+                 <div className="relative border border-dark-taupe/10 rounded-xl bg-white p-12 lg:p-20 transition-all duration-500">
+                    <div className="absolute -top-10 left-12 lg:left-20 w-20 h-20 bg-[#a59c94] rounded-br-xl rounded-tl-full flex items-center justify-center shadow-lg">
                        {section.icon}
                     </div>
                     

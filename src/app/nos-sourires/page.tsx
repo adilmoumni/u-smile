@@ -50,15 +50,14 @@ export default function NosSourires() {
       
       <main className="pt-20 bg-white">
         {/* Hero Section */}
-        <section className="py-24 bg-[#f8f7f5]/50 overflow-hidden">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-            <h1 className="text-4xl lg:text-6xl font-light text-dark-taupe font-serif leading-tight max-w-4xl mx-auto">
-              Votre plus beau Smile <br />
-              commence avec nous.
+        <section className="py-24 bg-[#F0FBFF] rounded-lg mx-20 mt-20 overflow-hidden">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8 text-start">
+            <h1 className="text-4xl lg:text-6xl font-light text-dark-taupe font-serif leading-tight max-w-4xl">
+              Votre plus beau <br /> <span className="font-bold">Smile</span> commence avec nous.
             </h1>
-            <p className="mt-8 text-lg text-[#393939] font-light max-w-3xl mx-auto leading-relaxed">
+            <p className="mt-8 text-lg text-[#393939] font-light max-w-3xl leading-relaxed">
               Parce que chaque sourire est unique, nous prenons à cœur de partager avec vous les résultats obtenus chez 
-              <span className="font-medium"> U-Smile Orthodontie</span>. Ces transformations témoignent de notre engagement quotidien, à vos côtés, 
+              <span className="font-bold"> U-Smile Orthodontie</span>. Ces transformations témoignent de notre engagement quotidien, à vos côtés, 
               à chaque étape de la vie. Ces sourires représentent des traitements personnalisés, réalisés avec une approche fondée sur 
               l'expertise, l'écoute et l'utilisation des meilleures technologies.
             </p>
