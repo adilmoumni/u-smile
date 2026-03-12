@@ -3,8 +3,9 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
-const services: { title: React.ReactNode; alt: string; icon: string }[] = [
+const services: { title: React.ReactNode; alt: string; icon: string, link: string }[] = [
   {
     title: (
       <>
@@ -15,6 +16,7 @@ const services: { title: React.ReactNode; alt: string; icon: string }[] = [
     ),
     alt: "Consultation et Diagnostic",
     icon: "/images/icon/1.svg",
+    link: "/nos-soins"
   },
   {
     title: (
@@ -30,6 +32,7 @@ const services: { title: React.ReactNode; alt: string; icon: string }[] = [
     ),
     alt: "Stabilité du traitement et Réhabilitation Fonctionnelle",
     icon: "/images/icon/2.svg",
+    link: "/nos-soins"
   },
   {
     title: (
@@ -43,6 +46,7 @@ const services: { title: React.ReactNode; alt: string; icon: string }[] = [
     ),
     alt: "Orthodontie et Orthopédie Dento-Faciale",
     icon: "/images/icon/2.svg",
+    link: "/nos-soins"
   },
   {
     title: (
@@ -54,10 +58,12 @@ const services: { title: React.ReactNode; alt: string; icon: string }[] = [
     ),
     alt: "Apnée du sommeil",
     icon: "/images/icon/3.svg",
+    link: "/nos-soins"
   },
 ];
 
 export default function ServicesSection() {
+  const router = useRouter();
   return (
     <section id="services" className="bg-[#a59c94] py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -65,7 +71,8 @@ export default function ServicesSection() {
           <span className="inline-block rounded-lg border border-white/20 px-8 py-1.5 text-xs font-semibold tracking-wider text-white uppercase mb-6">
             NOS SOINS
           </span>
-          <h2 className="text-4xl sm:text-5xl font-light text-white leading-tight font-serif max-w-2xl">
+          <h2 className="text-4xl sm:text-5xl font-light text-white leading-tight font-serif max-w-2xl"
+          >
             Accompagner <span className="font-bold">le sourire </span> à chaque étape de la vie.
           </h2>
         </div>
@@ -74,12 +81,13 @@ export default function ServicesSection() {
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="group relative bg-white rounded-xl p-8 pt-12 min-h-[350px] transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between"
+              onClick={() => router.push(service.link)}
+              className="group relative bg-white rounded-xl p-8 pt-12 min-h-[350px] transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between cursor-pointer"
             >
               <div>
                 <div className="flex justify-end relative mb-10 w-full">
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-[#F0FBFF] rounded-bl-full w-20 h-20 -m-4 scale-110"></div>
+                  <div className="relative w-24 h-24 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-[#F0FBFF] rounded-bl-full"></div>
                     <div className="relative text-dark-taupe/40 group-hover:text-accent transition-colors duration-500 z-10 w-12 h-12 flex items-center justify-center">
                       <Image
                         src={service.icon}

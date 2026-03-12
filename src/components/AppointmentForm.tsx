@@ -90,7 +90,7 @@ export default function AppointmentForm() {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="group flex items-center gap-3 bg-[#3a3a3a] text-white px-10 py-4 rounded-xl text-xs font-bold tracking-[0.2em] uppercase hover:bg-black transition-all duration-300 shadow-lg shadow-black/10"
+                  className="group flex items-center gap-3 bg-[#3a3a3a] text-white px-10 py-3 rounded-xl text-xs font-bold tracking-[0.2em] uppercase hover:bg-black transition-all duration-300 shadow-lg shadow-black/10"
                 >
                   ENVOYER
                   <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

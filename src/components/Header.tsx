@@ -59,7 +59,7 @@ export default function Header() {
     >
       {/* ── Top Info Bar ── */}
       <div className="bg-[#96928E] text-white text-[10px] sm:text-xs">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-2">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
           {/* Phone numbers */}
           <div className="flex items-center gap-3 sm:gap-5">
             <a

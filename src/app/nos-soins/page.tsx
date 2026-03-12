@@ -73,20 +73,6 @@ export default function NosSoins() {
       <Header />
       
       <main className="pt-20">
-        {/* Hub Header */}
-        <section className="bg-white py-16 lg:py-24 border-b border-foreground/5">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <span className="inline-block rounded-full bg-accent/10 border border-accent/20 px-4 py-1.5 text-xs font-semibold tracking-wider text-accent uppercase mb-6">
-              VOTRE PARCOURS DE SOIN
-            </span>
-            <h1 className="text-5xl lg:text-7xl font-light text-dark-taupe font-serif mb-8 leading-tight">
-               Nos Soins
-            </h1>
-            <p className="text-dark-taupe/60 text-lg lg:text-xl font-light max-w-2xl leading-relaxed">
-              Une approche globale de l'orthodontie où technologie et bien-être se rencontrent pour sublimer votre sourire.
-            </p>
-          </div>
-        </section>
 
         {/* Hero Section: Consultation & Diagnostic (Featured) */}
         <section className="py-24 bg-[#fdfcfb]">

@@ -20,13 +20,14 @@ function DoctorProfile({ name, titles, bio, image, isReversed }: DoctorProfilePr
     <div className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 py-20 ${isReversed ? 'lg:flex-row-reverse' : ''}`}>
       {/* Left: Image with Stylized U */}
       <div className="relative w-full lg:w-1/2 flex justify-center">
-        <div className="relative w-full max-w-[500px] aspect-square">
+        <div className="relative w-full max-w-[500px] aspect-[4/5] lg:aspect-[3/4]">
           {/* Doctor Portrait */}
           <Image
             src={image}
             alt={name}
             fill
-            className="object-cover object-top hover:scale-105 transition-transform duration-700"
+            className="object-contain object-bottom hover:scale-105 transition-transform duration-700"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
 
           {/* Decorative element - Small spearmint circle */}

@@ -80,17 +80,17 @@ export default function TestimonialsSection() {
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex gap-4 mt-8 justify-center lg:justify-start lg:absolute lg:top-[-100px] lg:right-0">
+          <div className="flex gap-4 mt-8 justify-center lg:mt-0">
             <button
               onClick={() => scroll("left")}
-              className="w-12 h-12 rounded-full border border-dark-taupe/20 flex items-center justify-center text-dark-taupe hover:bg-accent hover:border-accent hover:text-white transition-all duration-300"
+              className="w-12 h-12 rounded-full border border-dark-taupe/20 flex items-center justify-center text-dark-taupe hover:bg-accent hover:border-accent hover:text-white transition-all duration-300 lg:absolute lg:left-[-60px] lg:top-1/2 lg:-translate-y-1/2"
               aria-label="Previous"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="w-12 h-12 rounded-full border border-dark-taupe/20 flex items-center justify-center text-dark-taupe hover:bg-accent hover:border-accent hover:text-white transition-all duration-300"
+              className="w-12 h-12 rounded-full border border-dark-taupe/20 flex items-center justify-center text-dark-taupe hover:bg-accent hover:border-accent hover:text-white transition-all duration-300 lg:absolute lg:right-[-60px] lg:top-1/2 lg:-translate-y-1/2"
               aria-label="Next"
             >
               <ChevronRight className="w-6 h-6" />

@@ -4,12 +4,12 @@ import Image from "next/image";
 
 export default function CabinetDetails() {
   return (
-    <section className="bg-[#f2fbff] py-24 lg:py-32 overflow-hidden">
+    <section className="bg-[#f2fbff] py-24 lg:py-32 overflow-hidden lg:mx-12 mx-6 rounded-xl mt-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Top: Photo + Main Text */}
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 mb-24">
           <div className="relative">
-            <div className="relative w-full aspect-[4/5] rounded-tr-[15rem] overflow-hidden shadow-2xl">
+            <div className="relative w-full aspect-[4/5] rounded-tr-[6rem] lg:rounded-tr-[15rem] rounded-bl-[6rem] lg:rounded-bl-[15rem] overflow-hidden">
               <Image
                 src="/images/hero-clinic.png"
                 alt="Cabinet U.Smile"

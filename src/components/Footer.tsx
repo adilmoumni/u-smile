@@ -29,16 +29,12 @@ export default function Footer() {
           <div className="flex flex-col gap-6">
             <Link href="/">
               <Image
-                src="/images/logos/USMILE LOGO Horizontal - White.svg"
+                src="/images/logos/USMILE LOGO Horizontal - White_1.svg"
                 alt="U-Smile Orthodontie"
-                width={145}
-                height={42}
+                width={175}
+                height={50}
               />
             </Link>
-            <span className="text-[11px] uppercase tracking-[0.15em] text-white/35 font-medium">
-              Orthodontie
-            </span>
-
             {/* Partner logos (text placeholders matching the reference) */}
             <div className="mt-4 flex flex-col gap-4">
               <div className="flex items-center gap-2">
@@ -62,7 +58,9 @@ export default function Footer() {
 
           {/* ─── Column 2: Liens Utiles ─── */}
           <div>
-            <h4 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/40 mb-6 font-sans">
+            <h4 className="text-[15px] font-light uppercase tracking-[0.15em] text-white/40 mb-6 font-sans"
+              style={{ fontFamily: 'var(--font-sofia-pro), sans-serif', fontStyle: 'normal' }}
+            >
               Liens Utiles
             </h4>
             <ul className="space-y-3">
@@ -70,7 +68,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/60 hover:text-white transition-colors duration-300"
+                    className="text-sm text-white hover:text-white transition-colors duration-300"
                   >
                     {link.label}
                   </Link>
@@ -81,7 +79,9 @@ export default function Footer() {
 
           {/* ─── Column 3: Services ─── */}
           <div>
-            <h4 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/40 mb-6 font-sans">
+            <h4 className="text-[15px] font-light uppercase tracking-[0.15em] text-white/40 mb-6 font-sans"
+              style={{ fontFamily: 'var(--font-sofia-pro), sans-serif', fontStyle: 'normal' }}
+            >
               Services
             </h4>
             <ul className="space-y-3">
@@ -89,7 +89,7 @@ export default function Footer() {
                 <li key={service}>
                   <Link
                     href="/nos-soins"
-                    className="text-sm text-white/60 hover:text-white transition-colors duration-300"
+                    className="text-sm text-white hover:text-white transition-colors duration-300"
                   >
                     {service}
                   </Link>
@@ -100,13 +100,15 @@ export default function Footer() {
 
           {/* ─── Column 4: Contact ─── */}
           <div>
-            <h4 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/40 mb-6 font-sans">
+            <h4 className="text-[15px] font-light uppercase tracking-[0.15em] text-white/40 mb-6 font-sans"
+              style={{ fontFamily: 'var(--font-sofia-pro), sans-serif', fontStyle: 'normal' }}
+            >
               Contact
             </h4>
 
             <div className="space-y-5">
               {/* Addresses */}
-              <div className="space-y-3 text-sm text-white/60 leading-relaxed">
+              <div className="space-y-3 text-sm text-white leading-relaxed">
                 <p>
                   6 Rue Abou Zaid Eddaboussi, Vélodrome.
                   <br />
@@ -123,7 +125,7 @@ export default function Footer() {
               <div className="flex flex-col gap-1.5">
                 <a
                   href="tel:+212700722556"
-                  className="flex items-center gap-2.5 text-sm text-white/60 hover:text-white transition-colors"
+                  className="flex items-center gap-2.5 text-sm text-white hover:text-white transition-colors"
                 >
                   <svg
                     className="w-4 h-4 shrink-0 text-white/35"
@@ -142,7 +144,7 @@ export default function Footer() {
                 </a>
                 <a
                   href="tel:+212522396210"
-                  className="flex items-center gap-2.5 text-sm text-white/60 hover:text-white transition-colors pl-[26px]"
+                  className="flex items-center gap-2.5 text-sm text-white hover:text-white transition-colors pl-[26px]"
                 >
                   (212) 522-396210
                 </a>
@@ -151,7 +153,7 @@ export default function Footer() {
               {/* Email */}
               <a
                 href="mailto:contact@usmile.com"
-                className="flex items-center gap-2.5 text-sm text-white/60 hover:text-spearmint-light transition-colors"
+                className="flex items-center gap-2.5 text-sm text-white hover:text-spearmint-light transition-colors"
               >
                 <svg
                   className="w-4 h-4 shrink-0 text-white/35"
@@ -172,7 +174,7 @@ export default function Footer() {
               {/* CTA */}
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-full border border-white/25 px-7 py-2.5 text-[12px] font-semibold uppercase tracking-wider text-white/80 hover:bg-white/10 hover:border-white/40 transition-all duration-300 mt-2"
+                className="inline-flex bg-white text-dark-taupe items-center justify-center rounded-xl px-7 py-2 text-[12px] font-semibold uppercase tracking-wider hover:bg-dark-taupe hover:text-white transition-all duration-300 mt-2"
               >
                 Prendre Rendez-Vous
               </a>
@@ -184,21 +186,21 @@ export default function Footer() {
       {/* ── Bottom bar ── */}
       <div className="border-t border-white/8">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[11px] text-white/30 uppercase tracking-wider">
-            © 2026{" "}
-            <span className="text-white/50 font-medium">U.Smile.</span>{" "}
-            Tous les droits réservés
+          <p className="text-[11px] text-white uppercase tracking-wider">
+            © {new Date().getFullYear()}{" "}
+            <span className="text-white font-medium">U.Smile.</span>{" "}
+            <span className="text-white/50">Tous les droits réservés</span>
           </p>
           <div className="flex gap-6 text-[11px] text-white/30 uppercase tracking-wider">
             <a
               href="#"
-              className="hover:text-white/50 transition-colors duration-300"
+              className="hover:text-white/50  text-white transition-colors duration-300"
             >
               Mentions Légales
             </a>
             <a
               href="#"
-              className="hover:text-white/50 transition-colors duration-300"
+              className="hover:text-white/50 text-white transition-colors duration-300"
             >
               Politique de Confidentialité
             </a>
