@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { CheckCircle2, X } from "lucide-react";
+import { CheckCircle2, X, ChevronDown } from "lucide-react";
 
 export default function AppointmentForm() {
   const [formData, setFormData] = useState({
@@ -139,17 +139,21 @@ export default function AppointmentForm() {
                     />
                   </div>
                   {/* Lieu */}
-                  <div>
+                  <div className="relative">
                     <select
                       name="location"
                       value={formData.location}
                       onChange={handleChange}
-                      className={`w-full bg-white/50 border ${errors.location ? 'border-red-500' : 'border-blue-100'} rounded-xl px-4 py-4 text-xs font-medium tracking-widest ${formData.location ? 'text-dark-taupe' : 'text-dark-taupe/30'} focus:outline-none focus:ring-2 focus:ring-spearmint/20 transition-all uppercase appearance-none`}
+                      className={`w-full bg-white/50 border ${errors.location ? 'border-red-500' : 'border-blue-100'} rounded-xl px-4 py-4 text-xs font-medium tracking-widest ${formData.location ? 'text-dark-taupe' : 'text-dark-taupe/30'} focus:outline-none focus:ring-2 focus:ring-spearmint/20 transition-all uppercase appearance-none cursor-pointer pr-10`}
                     >
                       <option value="" disabled>CHOISIR LE LIEU</option>
                       <option value="bouskora">Bouskoura</option>
                       <option value="velodrome">Vélodrome Casablanca</option>
+                      <option value="both">Bouskoura & Vélodrome</option>
                     </select>
+                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-dark-taupe/40">
+                      <ChevronDown className="w-4 h-4" />
+                    </div>
                   </div>
                 </div>
 
@@ -161,6 +165,7 @@ export default function AppointmentForm() {
                       name="date"
                       value={formData.date}
                       onChange={handleChange}
+                      min={new Date().toISOString().split('T')[0]}
                       className={`w-full bg-white/50 border ${errors.date ? 'border-red-500' : 'border-blue-100'} rounded-xl px-4 py-4 text-xs font-medium tracking-widest text-dark-taupe/70 focus:outline-none focus:ring-2 focus:ring-spearmint/20 transition-all uppercase`}
                     />
                   </div>
