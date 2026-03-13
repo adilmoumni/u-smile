@@ -3,6 +3,9 @@
 import Image from "next/image";
 import { useState } from "react";
 import { CheckCircle2, X, ChevronDown } from "lucide-react";
+import { db, functions } from "@/lib/firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { httpsCallable } from "firebase/functions";
 
 export default function AppointmentForm() {
   const [formData, setFormData] = useState({
@@ -38,20 +41,33 @@ export default function AppointmentForm() {
     if (!validate()) return;
 
     setIsSubmitting(true);
+    console.log("Submitting appointment via Cloud Function...");
     
     try {
-      const response = await fetch('/api/send-appointment', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
+      const fullPhone = `${formData.phonePrefix} ${formData.phone}`;
+
+      // 1. Direct Firestore Save (Client-side backup for safety)
+      try {
+        await addDoc(collection(db, "appointments"), {
           ...formData,
-          phone: `${formData.phonePrefix} ${formData.phone}`
-        }),
+          phone: fullPhone,
+          createdAt: serverTimestamp(),
+          status: "pending",
+          source: "frontend_client_v2"
+        });
+        console.log("Backup save to Firestore successful.");
+      } catch (fsError) {
+        console.warn("Client-side backup failed, relying on Cloud Function.", fsError);
+      }
+
+      // 2. Call Cloud Function (Master controller: Handles Emails + DB)
+      const submitAppointment = httpsCallable(functions, 'submitAppointment');
+      const result = await submitAppointment({
+        ...formData,
+        phone: fullPhone
       });
 
-      if (response.ok) {
+      if ((result.data as any).success) {
         setShowSuccess(true);
         setFormData({
           name: "",
@@ -64,12 +80,11 @@ export default function AppointmentForm() {
           message: ""
         });
       } else {
-        const errorData = await response.json();
-        alert(`Erreur: ${errorData.error || 'Une erreur est survenue lors de l\'envoi.'}`);
+        alert("Une erreur est survenue. Le service n'a pas pu traiter votre demande.");
       }
     } catch (error) {
       console.error('Submission error:', error);
-      alert('Une erreur réseau est survenue. Veuillez réessayer plus tard.');
+      alert('Une erreur est survenue. Veuillez réessayer plus tard.');
     } finally {
       setIsSubmitting(false);
     }

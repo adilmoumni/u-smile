@@ -104,7 +104,12 @@ export const metadata: Metadata = {
       "Des soins dentaires modernes pour un sourire éclatant.",
     type: "website",
   },
+  icons: {
+    icon: "/images/logos/USMILE LOGO Symbol - Dark Taupe.svg",
+  },
 };
+
+import FirebaseProvider from "@/components/FirebaseProvider";
 
 export default function RootLayout({
   children,
@@ -116,7 +121,9 @@ export default function RootLayout({
       <body
         className={`${ivyPresto.variable} ${sofiaPro.variable} antialiased`}
       >
-        {children}
+        <FirebaseProvider>
+          {children}
+        </FirebaseProvider>
       </body>
     </html>
   );

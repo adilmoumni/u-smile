@@ -3,10 +3,26 @@ import nodemailer from 'nodemailer';
 import fs from 'fs';
 import path from 'path';
 import { getAdminEmailTemplate, getUserEmailTemplate } from '@/lib/emailTemplates';
+import { dbAdmin } from '@/lib/firebase-admin';
+import * as admin from 'firebase-admin';
 
 export async function POST(request: Request) {
   try {
     const data = await request.json();
+
+    // 1. Save to Firestore (Server-side)
+    try {
+      await dbAdmin.collection('appointments').add({
+        ...data,
+        createdAt: admin.firestore.FieldValue.serverTimestamp(),
+        status: "pending",
+        source: "backend_api"
+      });
+      console.log('Appointment saved to Firestore via Admin SDK');
+    } catch (dbError) {
+      console.error('Firestore save failed:', dbError);
+      // We still try to send the email if DB save fails
+    }
 
     // Read logo file
     const logoPath = path.join(process.cwd(), 'public/images/logos', 'USMILE LOGO Horizontal - Black_1.svg');
@@ -26,7 +42,7 @@ export async function POST(request: Request) {
       }
     });
 
-    // 1. Send email to ADMIN
+    // 2. Send email to ADMIN
     await transporter.sendMail({
       from: `"U-Smile Website" <${process.env.MAIL_USERNAME}>`,
       to: process.env.ADMIN_EMAIL || 'adilmoumni@gmail.com', // Admin email from env
@@ -41,7 +57,7 @@ export async function POST(request: Request) {
       ]
     });
 
-    // 2. Send confirmation to USER
+    // 3. Send confirmation to USER
     await transporter.sendMail({
       from: `"U-Smile Orthodontie" <${process.env.MAIL_USERNAME}>`,
       to: data.email,
@@ -58,7 +74,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true });
   } catch (error: any) {
-    console.error('Email sending failed:', error);
+    console.error('Submission failed:', error);
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });
   }
 }
