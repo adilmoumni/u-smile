@@ -173,7 +173,7 @@ export default function Footer() {
 
               {/* CTA */}
               <a
-                href="#contact"
+                href="/#contact"
                 className="inline-flex bg-white text-dark-taupe items-center justify-center rounded-xl px-7 py-2 text-[12px] font-semibold uppercase tracking-wider hover:bg-dark-taupe hover:text-white transition-all duration-300 mt-2"
               >
                 Prendre Rendez-Vous

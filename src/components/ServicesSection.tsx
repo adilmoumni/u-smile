@@ -15,7 +15,7 @@ const services: { title: React.ReactNode; alt: string; icon: string, link: strin
       </>
     ),
     alt: "Consultation et Diagnostic",
-    icon: "/images/icon/1.svg",
+    icon: "/images/icon/nos-soins/3.svg",
     link: "/nos-soins/consultation"
   },
   {
@@ -31,7 +31,7 @@ const services: { title: React.ReactNode; alt: string; icon: string, link: strin
       </>
     ),
     alt: "Stabilité du traitement et Réhabilitation Fonctionnelle",
-    icon: "/images/icon/2.svg",
+    icon: "/images/icon/nos-soins/1.svg",
     link: "/nos-soins/stabilite-et-rehabilitation"
   },
   {
@@ -45,7 +45,7 @@ const services: { title: React.ReactNode; alt: string; icon: string, link: strin
       </>
     ),
     alt: "Orthodontie et Orthopédie Dento-Faciale",
-    icon: "/images/icon/2.svg",
+    icon: "/images/icon/nos-soins/4.svg",
     link: "/nos-soins/orthodontie-et-orthopedie"
   },
   {
@@ -57,7 +57,7 @@ const services: { title: React.ReactNode; alt: string; icon: string, link: strin
       </>
     ),
     alt: "Apnée du sommeil",
-    icon: "/images/icon/3.svg",
+    icon: "/images/icon/nos-soins/2.svg",
     link: "/nos-soins/apnee-du-sommeil"
   },
 ];
@@ -87,13 +87,12 @@ export default function ServicesSection() {
               <div>
                 <div className="flex justify-end relative mb-10 w-full">
                   <div className="relative w-24 h-24 flex items-center justify-center">
-                    <div className="absolute inset-0 bg-[#F0FBFF] rounded-bl-full"></div>
-                    <div className="relative text-dark-taupe/40 group-hover:text-accent transition-colors duration-500 z-10 w-12 h-12 flex items-center justify-center">
+                    <div className="relative text-dark-taupe/40 group-hover:text-accent transition-colors duration-500 z-10 w-full h-full flex items-center justify-center">
                       <Image
                         src={service.icon}
                         alt={service.alt}
-                        width={48}
-                        height={48}
+                        width={90}
+                        height={90}
                         className="object-contain"
                       />
                     </div>
