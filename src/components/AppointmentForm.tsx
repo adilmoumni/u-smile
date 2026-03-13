@@ -36,19 +36,37 @@ export default function AppointmentForm() {
     if (!validate()) return;
 
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setShowSuccess(true);
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      location: "",
-      date: "",
-      subject: "",
-      message: ""
-    });
+    
+    try {
+      const response = await fetch('/api/send-appointment', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setShowSuccess(true);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          location: "",
+          date: "",
+          subject: "",
+          message: ""
+        });
+      } else {
+        const errorData = await response.json();
+        alert(`Erreur: ${errorData.error || 'Une erreur est survenue lors de l\'envoi.'}`);
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('Une erreur réseau est survenue. Veuillez réessayer plus tard.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

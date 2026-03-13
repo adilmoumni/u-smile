@@ -21,7 +21,7 @@ export default function CabinetDetails() {
           
           <div className="flex flex-col justify-center">
             <div className="mb-10">
-              <span className="inline-block rounded-lg bg-white border-[0.5px] border-dark-taupe/20 px-4 py-1.5 text-xs font-semibold tracking-wider text-dark-taupe uppercase mb-6">
+              <span className="inline-block rounded-lg border-[0.5px] border-dark-taupe/20 px-4 py-1.5 text-xs font-semibold tracking-wider text-dark-taupe uppercase mb-6">
                 A PROPOS DU CABINET
               </span>
               <h2 className="text-4xl lg:text-5xl font-light text-dark-taupe leading-tight font-serif mb-8">
@@ -42,7 +42,7 @@ export default function CabinetDetails() {
         {/* Middle: Vision and Engagement */}
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 mb-24">
           <div>
-            <span className="inline-block rounded-lg bg-white border-[0.5px] border-dark-taupe/20 px-4 py-1.5 text-[10px] font-semibold tracking-wider text-dark-taupe uppercase mb-6">
+            <span className="inline-block rounded-lg border-[0.5px] border-dark-taupe/20 px-4 py-1.5 text-[10px] font-semibold tracking-wider text-dark-taupe uppercase mb-6">
               NOTRE VISION
             </span>
             <p className="text-[#393939] font-light leading-relaxed">
@@ -50,7 +50,7 @@ export default function CabinetDetails() {
             </p>
           </div>
           <div>
-            <span className="inline-block rounded-lg bg-white border-[0.5px] border-dark-taupe/20 px-4 py-1.5 text-[10px] font-semibold tracking-wider text-dark-taupe uppercase mb-6">
+            <span className="inline-block rounded-lg border-[0.5px] border-dark-taupe/20 px-4 py-1.5 text-[10px] font-semibold tracking-wider text-dark-taupe uppercase mb-6">
               NOTRE ENGAGEMENT
             </span>
             <p className="text-[#393939] font-light leading-relaxed">
@@ -61,7 +61,7 @@ export default function CabinetDetails() {
 
         {/* Bottom: Values */}
         <div>
-          <span className="inline-block rounded-lg bg-white border-[0.5px] border-dark-taupe/20 px-4 py-1.5 text-[10px] font-semibold tracking-wider text-dark-taupe uppercase mb-10">
+          <span className="inline-block rounded-lg border-[0.5px] border-dark-taupe/20 px-4 py-1.5 text-[10px] font-semibold tracking-wider text-dark-taupe uppercase mb-10">
             NOS VALEURS
           </span>
           <h3 className="text-4xl lg:text-5xl font-light text-dark-taupe font-serif mb-12 flex flex-wrap items-center gap-x-6 gap-y-4">
