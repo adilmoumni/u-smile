@@ -42,43 +42,39 @@ export default function ConsultationDiagnostic() {
       <Header />
       
       <main className="pt-20 bg-[#FDFCFB]">
-        {/* Navigation / Page Title Section */}
-        <section className="bg-white py-12 border-b border-foreground/5">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 flex items-center gap-6">
-            <Link 
-              href="/nos-soins"
-              className="p-2 rounded-full hover:bg-gray-100 transition-colors text-dark-taupe"
-              aria-label="Retour à nos soins"
-            >
-              <MoveLeft className="w-6 h-6" />
-            </Link>
-            <h1 className="text-4xl lg:text-5xl font-light text-dark-taupe font-serif">
-               Consultation et Diagnostic
-            </h1>
-          </div>
-        </section>
-
         {/* Hero Section */}
-        <section className="py-16 lg:py-24">
+        <section className="py-16 lg:py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="relative rounded-[2.5rem] lg:rounded-[4rem] overflow-hidden shadow-2xl h-[400px] lg:h-[600px]">
-              <Image
-                src="/images/cabinet/consultation-hero.jpeg"
-                alt="Consultation et Diagnostic au cabinet U-Smile"
-                fill
-                className="object-cover object-center"
-                priority
-              />
-              <div className="absolute inset-0 bg-black/5" />
-              
-              {/* Badge Overlay */}
-              <div className="absolute top-8 right-8 lg:top-12 lg:right-12 bg-white/90 backdrop-blur-md rounded-2xl p-4 lg:p-6 shadow-xl border border-white/20 flex items-center gap-4 animate-fade-in">
-                <div className="p-3 bg-dark-taupe rounded-xl text-white">
-                  <Monitor className="w-6 h-6" />
+            <div className="relative overflow-visible">
+              {/* Organic Shape Container */}
+              <div 
+                className="relative aspect-[16/9] w-full overflow-hidden z-0"
+                style={{ borderRadius: '0rem 12rem 0rem 12rem' }}
+              >
+                <Image
+                  src="/images/cabinet/cabinet-consultation.png"
+                  alt="Consultation et Diagnostic au cabinet U-Smile"
+                  fill
+                  className="object-cover object-center"
+                  priority
+                />
+              </div>
+
+              {/* Redesigned Floating Badge */}
+              <div className="absolute top-0 right-0 lg:top-16 lg:-right-10 bg-white rounded-lg border border-[#393939] overflow-hidden flex items-stretch z-10 animate-fade-in group pointer-events-none">
+                <div className=" px-8 flex flex-col justify-center bg-white">
+                  <p className="text-[#393939] font-bold text-lg lg:text-xl leading-tight">
+                    Consultation et <br /> Diagnostic
+                  </p>
                 </div>
-                <div className="pr-4">
-                  <p className="text-xs font-bold uppercase tracking-widest text-dark-taupe/40 mb-1">Détail du soin</p>
-                  <p className="text-dark-taupe font-serif text-lg lg:text-xl font-medium leading-none">Consultation et <br />Diagnostic</p>
+                <div className="flex items-center justify-center">
+                  <Image
+                    src="/images/icon/home/consultation.svg"
+                    alt="Consultation et Diagnostic"
+                    width={70}
+                    height={70}
+                    className="object-contain"
+                  />
                 </div>
               </div>
             </div>
@@ -88,14 +84,14 @@ export default function ConsultationDiagnostic() {
         {/* Introduction Section */}
         <section className="pb-24 lg:pb-32 px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
-              <div className="lg:w-1/2">
-                <h2 className="text-4xl lg:text-5xl font-light text-dark-taupe leading-tight font-serif mb-8">
+            <div className="grid lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20 items-start">
+              <div>
+                <h2 className="text-4xl lg:text-5xl font-light text-[#393939] leading-tight font-serif">
                   Grâce aux outils numériques <br /> 
-                  utilisés au cabinet,
+                  utilisés <span className="italic font-bold text-[#393939]">au cabinet,</span>
                 </h2>
               </div>
-              <div className="lg:w-1/2 space-y-6 text-dark-taupe/70 font-light text-lg leading-relaxed">
+              <div className="grid grid-cols-1 md:grid-cols-1 gap-8 text-[#393939] font-light text-lg leading-relaxed">
                 <p>
                   notamment le scanner iTero et le logiciel de planification de traitement Clincheck Pro 3D, vous bénéficiez dès cette 1ère visite d’une simulation 3D avant/après dentaire et de votre sourire. Ces éléments sont expliqués en toute transparence par l’équipe afin de vous permettre de mieux comprendre les objectifs du traitement et de faire votre choix parmi les différentes options thérapeutiques proposées.
                 </p>
@@ -107,48 +103,43 @@ export default function ConsultationDiagnostic() {
           </div>
         </section>
 
-        {/* Tech Features Grid */}
+        {/* Tech Features Grid - Redesigned */}
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
               {techFeatures.map((tech, idx) => (
-                <div key={idx} className="group relative flex flex-col bg-[#FDFCFB] rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100">
-                  <div className="relative h-72 lg:h-80 overflow-hidden">
+                <div key={idx} className="group relative flex flex-col bg-white rounded-2xl p-8 lg:p-12 border border-gray-100 hover:shadow-xl transition-all duration-500">
+                  <div className="relative h-64 lg:h-80 overflow-hidden mb-10" style={{ borderRadius: '0.5rem 0.5rem 5.5rem 0.5rem' }}>
                     <Image
                       src={tech.image}
                       alt={tech.title}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-dark-taupe/5 group-hover:bg-dark-taupe/0 transition-colors duration-500" />
                   </div>
                   
-                  <div className="p-10 flex-1 flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className="w-10 h-10 rounded-xl bg-white shadow-md flex items-center justify-center text-accent">
-                          {tech.icon}
-                        </div>
-                        <h3 className="text-2xl font-serif text-dark-taupe font-medium">{tech.title}</h3>
-                      </div>
-                      <p className="text-dark-taupe/70 font-light leading-relaxed mb-6">
+                  <div className="flex-1 flex flex-col">
+                    <h3 className="text-2xl lg:text-3xl font-bold font-serif text-[#393939] mb-8">
+                      {tech.title}
+                    </h3>
+                    
+                    <div className="space-y-6">
+                      <p className="text-[#393939] font-light text-lg leading-relaxed">
                         {tech.description}
                       </p>
+                      
+                      {tech.note && (
+                        <p className="text-[#393939]/70 italic text-sm font-medium">
+                          {tech.note}
+                        </p>
+                      )}
                     </div>
-                    
-                    {tech.note && (
-                      <p className="text-accent/60 text-sm font-light">
-                        {tech.note}
-                      </p>
-                    )}
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
-        <AppointmentForm />
       </main>
 
       <Footer />

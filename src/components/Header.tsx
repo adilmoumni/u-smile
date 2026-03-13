@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Le Cabinet", href: "/le-cabinet" },
   { label: "Notre Équipe", href: "/notre-equipe" },
   { label: "Nos Équipements", href: "/nos-equipements" },
-  { label: "Nos Soins", href: "/nos-soins" },
+  { label: "Nos Soins", href: "/#services" },
   { label: "Nos Sourires", href: "/nos-sourires" },
   { label: "U.Smile Formations", href: "/u-smile-formations" },
   { label: "FAQ", href: "/faq" },

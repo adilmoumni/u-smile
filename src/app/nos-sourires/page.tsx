@@ -104,13 +104,13 @@ export default function NosSourires() {
           <SmileComparison
             category="Adulte"
             avant="/images/sourires/smile 8 avant.png"
-            apres="/images/sourires/smile 8 après.png"
+            apres="/images/sourires/smile_8_apres.png"
           />
 
           <SmileComparison
             category="Senior"
             avant="/images/sourires/smile 9 avant.png"
-            apres="/images/sourires/smile 9 Après.png"
+            apres="/images/sourires/smile_9_apres.png"
           />
         </div>
       </main>

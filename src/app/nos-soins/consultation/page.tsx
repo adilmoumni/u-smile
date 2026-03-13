@@ -30,6 +30,7 @@ export default function StabilitePage() {
               className="object-contain"
             />
           }
+          btnLink="/nos-soins/consultation-et-diagnostic"
         />
       </main>
 

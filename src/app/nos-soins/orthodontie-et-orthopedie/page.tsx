@@ -30,6 +30,7 @@ export default function OrthodontiePage() {
               className="object-contain"
             />
           }
+          btnLink="/nos-soins/orthodontie-et-orthopedie/details"
         />
       </main>
 
