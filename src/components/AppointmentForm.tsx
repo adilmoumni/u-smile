@@ -9,6 +9,7 @@ export default function AppointmentForm() {
     name: "",
     email: "",
     phone: "",
+    phonePrefix: "+212",
     location: "",
     date: "",
     subject: "",
@@ -23,7 +24,8 @@ export default function AppointmentForm() {
     const newErrors: Record<string, boolean> = {};
     if (!formData.name) newErrors.name = true;
     if (!formData.email || !/^\S+@\S+\.\S+$/.test(formData.email)) newErrors.email = true;
-    if (!formData.phone) newErrors.phone = true;
+    if (!formData.phone || formData.phone.length < 5) newErrors.phone = true;
+    if (!formData.phonePrefix) newErrors.phonePrefix = true;
     if (!formData.location) newErrors.location = true;
     if (!formData.date) newErrors.date = true;
     
@@ -43,7 +45,10 @@ export default function AppointmentForm() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          phone: `${formData.phonePrefix} ${formData.phone}`
+        }),
       });
 
       if (response.ok) {
@@ -52,6 +57,7 @@ export default function AppointmentForm() {
           name: "",
           email: "",
           phone: "",
+          phonePrefix: "+212",
           location: "",
           date: "",
           subject: "",
@@ -109,8 +115,8 @@ export default function AppointmentForm() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="NOM COMPLET"
-                      className={`w-full bg-white/50 border ${errors.name ? 'border-red-500' : 'border-blue-100'} rounded-xl px-4 py-4 text-xs font-medium tracking-widest placeholder:text-dark-taupe/30 focus:outline-none focus:ring-2 focus:ring-spearmint/20 transition-all uppercase`}
+                      placeholder="Nom Complet"
+                      className={`w-full bg-white/50 border ${errors.name ? 'border-red-500' : 'border-blue-100'} rounded-xl px-4 py-4 text-sm font-medium tracking-widest placeholder:text-dark-taupe/30 focus:outline-none focus:ring-2 focus:ring-spearmint/20 transition-all`}
                     />
                   </div>
                   {/* Email */}
@@ -120,22 +126,38 @@ export default function AppointmentForm() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="EMAIL"
-                      className={`w-full bg-white/50 border ${errors.email ? 'border-red-500' : 'border-blue-100'} rounded-xl px-4 py-4 text-xs font-medium tracking-widest placeholder:text-dark-taupe/30 focus:outline-none focus:ring-2 focus:ring-spearmint/20 transition-all uppercase`}
+                      placeholder="Email"
+                      className={`w-full bg-white/50 border ${errors.email ? 'border-red-500' : 'border-blue-100'} rounded-xl px-4 py-4 text-sm font-medium tracking-widest placeholder:text-dark-taupe/30 focus:outline-none focus:ring-2 focus:ring-spearmint/20 transition-all`}
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {/* Téléphone */}
-                  <div>
+                  {/* Unified Téléphone field */}
+                  <div className={`flex items-center bg-white/50 border ${errors.phone || errors.phonePrefix ? 'border-red-500' : 'border-blue-100'} rounded-xl px-4 focus-within:ring-2 focus-within:ring-spearmint/20 transition-all`}>
+                    <div className="flex items-center">
+                      <span className="text-sm font-medium text-dark-taupe/60">+</span>
+                      <input
+                        type="text"
+                        name="phonePrefix"
+                        value={formData.phonePrefix.replace('+', '')}
+                        onChange={(e) => {
+                          const val = e.target.value.replace(/[^0-9]/g, '').slice(0, 4);
+                          setFormData(prev => ({ ...prev, phonePrefix: `+${val}` }));
+                          if (errors.phonePrefix) setErrors(prev => ({ ...prev, phonePrefix: false }));
+                        }}
+                        placeholder="212"
+                        className="w-[35px] bg-transparent border-none py-4 text-sm font-medium focus:outline-none pl-0.5"
+                      />
+                    </div>
+                    <div className="w-px h-6 bg-blue-100 mx-2" />
                     <input
                       type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="NUMÉRO DE TÉLÉPHONE"
-                      className={`w-full bg-white/50 border ${errors.phone ? 'border-red-500' : 'border-blue-100'} rounded-xl px-4 py-4 text-xs font-medium tracking-widest placeholder:text-dark-taupe/30 focus:outline-none focus:ring-2 focus:ring-spearmint/20 transition-all uppercase`}
+                      placeholder="611223344 ..."
+                      className="flex-1 bg-transparent border-none py-4 text-sm font-medium tracking-widest placeholder:text-dark-taupe/30 focus:outline-none"
                     />
                   </div>
                   {/* Lieu */}
@@ -144,9 +166,9 @@ export default function AppointmentForm() {
                       name="location"
                       value={formData.location}
                       onChange={handleChange}
-                      className={`w-full bg-white/50 border ${errors.location ? 'border-red-500' : 'border-blue-100'} rounded-xl px-4 py-4 text-xs font-medium tracking-widest ${formData.location ? 'text-dark-taupe' : 'text-dark-taupe/30'} focus:outline-none focus:ring-2 focus:ring-spearmint/20 transition-all uppercase appearance-none cursor-pointer pr-10`}
+                      className={`w-full bg-white/50 border ${errors.location ? 'border-red-500' : 'border-blue-100'} rounded-xl px-4 py-4 text-sm font-medium tracking-widest ${formData.location ? 'text-dark-taupe' : 'text-dark-taupe/30'} focus:outline-none focus:ring-2 focus:ring-spearmint/20 transition-all appearance-none cursor-pointer pr-10`}
                     >
-                      <option value="" disabled>CHOISIR LE LIEU</option>
+                      <option value="" disabled>Choisir le lieu</option>
                       <option value="bouskora">Bouskoura</option>
                       <option value="velodrome">Vélodrome Casablanca</option>
                       <option value="both">Bouskoura & Vélodrome</option>
@@ -166,7 +188,7 @@ export default function AppointmentForm() {
                       value={formData.date}
                       onChange={handleChange}
                       min={new Date().toISOString().split('T')[0]}
-                      className={`w-full bg-white/50 border ${errors.date ? 'border-red-500' : 'border-blue-100'} rounded-xl px-4 py-4 text-xs font-medium tracking-widest text-dark-taupe/70 focus:outline-none focus:ring-2 focus:ring-spearmint/20 transition-all uppercase`}
+                      className={`w-full bg-white/50 border ${errors.date ? 'border-red-500' : 'border-blue-100'} rounded-xl px-4 py-4 text-sm font-medium tracking-widest text-dark-taupe/70 focus:outline-none focus:ring-2 focus:ring-spearmint/20 transition-all`}
                     />
                   </div>
                   {/* Objet */}
@@ -176,8 +198,8 @@ export default function AppointmentForm() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      placeholder="OBJET DE CONSULTATION"
-                      className="w-full bg-white/50 border border-blue-100 rounded-xl px-4 py-4 text-xs font-medium tracking-widest placeholder:text-dark-taupe/30 focus:outline-none focus:ring-2 focus:ring-spearmint/20 transition-all uppercase"
+                      placeholder="Objet de consultation"
+                      className="w-full bg-white/50 border border-blue-100 rounded-xl px-4 py-4 text-sm font-medium tracking-widest placeholder:text-dark-taupe/30 focus:outline-none focus:ring-2 focus:ring-spearmint/20 transition-all"
                     />
                   </div>
                 </div>
@@ -189,8 +211,8 @@ export default function AppointmentForm() {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="MESSAGE"
-                    className="w-full bg-white/50 border border-blue-100 rounded-2xl px-4 py-4 text-xs font-medium tracking-widest placeholder:text-dark-taupe/30 focus:outline-none focus:ring-2 focus:ring-spearmint/20 transition-all uppercase resize-none"
+                    placeholder="Message"
+                    className="w-full bg-white/50 border border-blue-100 rounded-2xl px-4 py-4 text-sm font-medium tracking-widest placeholder:text-dark-taupe/30 focus:outline-none focus:ring-2 focus:ring-spearmint/20 transition-all resize-none"
                   ></textarea>
                 </div>
 
@@ -198,7 +220,7 @@ export default function AppointmentForm() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`group flex items-center gap-3 bg-[#3a3a3a] text-white px-10 py-3 rounded-xl text-xs font-bold tracking-[0.2em] uppercase hover:bg-black transition-all duration-300 shadow-lg shadow-black/10 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  className={`group flex items-center gap-3 bg-[#3a3a3a] text-white px-10 py-3 rounded-xl text-sm font-bold tracking-[0.2em] uppercase hover:bg-black transition-all duration-300 shadow-lg shadow-black/10 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   {isSubmitting ? 'ENVOI EN COURS...' : 'ENVOYER'}
                   {!isSubmitting && (
