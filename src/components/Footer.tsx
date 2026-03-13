@@ -11,12 +11,12 @@ const quickLinks = [
 ];
 
 const services = [
-  "Consultation Orthodontique",
-  "Arthodontie Pédiatrique",
-  "Orthodontie Interceptive de L'enfant",
-  "Empreinte Optique Itero",
-  "Radiologie Panoramique Numérique",
-  "Orthodontie de L'adulte",
+  { label: "Consultation Orthodontique", href: "/nos-soins/consultation" },
+  { label: "Arthodontie Pédiatrique", href: "/nos-soins/orthodontie-et-orthopedie" },
+  { label: "Orthodontie Interceptive de L'enfant", href: "/nos-soins/orthodontie-et-orthopedie/details" },
+  { label: "Empreinte Optique Itero", href: "/nos-soins/consultation-et-diagnostic" },
+  { label: "Radiologie Panoramique Numérique", href: "/nos-soins/consultation-et-diagnostic" },
+  { label: "Orthodontie de L'adulte", href: "/nos-soins/stabilite-et-rehabilitation" },
 ];
 
 export default function Footer() {
@@ -77,12 +77,12 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {services.map((service) => (
-                <li key={service}>
+                <li key={service.label}>
                   <Link
-                    href="/nos-soins"
+                    href={service.href}
                     className="text-sm text-white hover:text-white transition-colors duration-300"
                   >
-                    {service}
+                    {service.label}
                   </Link>
                 </li>
               ))}

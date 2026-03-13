@@ -6,16 +6,54 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    text: "Un grand merci au cabinet du Dr Charafa Bennis. L&apos;accueil est chaleureux, le personnel très humain et à l&apos;écoute. On se sent accompagné avec beaucoup de professionnalisme et de bienveillance. Je recommande vivement !",
-    author: "Ghita Agallal",
+    text: "La pédagogie de Dr Bennis est remarquable. Les concepts sont clairs, structurés et applicables immédiatement en clinique.",
+    author: "Dr Assia",
+    role: "Chirurgien-dentiste",
   },
   {
-    text: "Superbe expérience au cabinet Usmile chez dr bennis. J&apos;avais un problème de mâchoire et d&apos;alignement Grâce a la technique des mini vices et Invisalign sans passer par la chirurgie mon sourire a été transformé grâce au dr bennis (professionnalisme et accompagnement à 100%) ",
-    author: "Nouhayla Lyoubi",
+    text: "Une formation marquée par une grande générosité dans le partage d&apos;expérience, bien au-delà du programme annoncé.",
+    author: "Dr Malika",
+    role: "Orthodontiste",
   },
   {
-    text: "Une équipe formidable et des résultats incroyables. Mon traitement Invisalign s&apos;est déroulé parfaitement et je ne pourrais pas être plus satisfaite de mon nouveau sourire. Merci à toute l&apos;équipe U-Smile !",
-    author: "Karima B.",
+    text: "La richesse et la diversité des cas cliniques apportent une vision concrète et réaliste de la pratique orthodontique.",
+    author: "Dr Salwa",
+    role: "Chirurgien-dentiste",
+  },
+  {
+    text: "Je n&apos;utilisais pas les aligneurs chez l&apos;enfant avant cette formation. Les cas présentés m&apos;ont permis d&apos;en comprendre les indications et de les intégrer en toute sécurité.",
+    author: "Dr Idriss",
+    role: "Chirurgien-dentiste",
+  },
+  {
+    text: "La prise en charge orthodontique de l&apos;enfant est abordée avec une grande justesse, notamment sur la croissance et le bon timing thérapeutique.",
+    author: "Dr Rita",
+    role: "Chirurgien-dentiste",
+  },
+  {
+    text: "Une formation qui a enrichi ma pratique quotidienne, avec des enseignements concrets et directement transposables.",
+    author: "Dr Chadi",
+    role: "Chirurgien-dentiste",
+  },
+  {
+    text: "L&apos;approche de Dr Bennis est profondément bienveillante. Elle prend le temps d&apos;accompagner chaque praticien, dans un climat à la fois exigeant et respectueux.",
+    author: "Dr Nabil",
+    role: "Chirurgien-dentiste",
+  },
+  {
+    text: "La formation met en lumière l&apos;apport du numérique tout en rappelant clairement que l&apos;outil reste au service du clinicien. La planification demeure une décision médicale guidée par l&apos;expertise de l&apos;orthodontiste.",
+    author: "Dr Ouafae",
+    role: "Orthodontiste",
+  },
+  {
+    text: "La digitalisation est abordée comme un véritable outil de précision clinique. Les flux numériques présentés permettent d&apos;optimiser le diagnostic et la planification, tout en gardant une maîtrise totale du traitement.",
+    author: "Dr Moulay",
+    role: "Orthodontiste",
+  },
+  {
+    text: "L&apos;approche numérique enseignée améliore clairement l&apos;expérience patient : meilleure compréhension du traitement, suivi plus fluide et communication plus efficace, sans jamais perdre la dimension humaine du soin.",
+    author: "Dr Saâd",
+    role: "Chirurgien-dentiste",
   },
 ];
 
@@ -38,7 +76,7 @@ export default function TestimonialsSection() {
             TÉMOIGNAGES
           </span>
           <h2 className="text-4xl sm:text-5xl font-light text-dark-taupe leading-tight">
-            Nos patients satisfaits
+            Témoignages Participants
           </h2>
         </div>
 
@@ -74,6 +112,7 @@ export default function TestimonialsSection() {
                   <p className="text-sm font-bold text-dark-taupe tracking-wider uppercase">
                     {t.author}
                   </p>
+                  <p className="text-xs text-dark-taupe/70 mt-1">{t.role}</p>
                 </div>
               </div>
             ))}

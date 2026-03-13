@@ -124,10 +124,13 @@ export default function FormationsPage() {
                   </div>
 
                   <div className="flex justify-end mt-8">
-                    <button className="bg-[#393939] text-white px-6 py-3 rounded-lg text-sm font-semibold tracking-wider flex items-center gap-2 hover:bg-[#2a2a2a] transition-all duration-300 uppercase">
+                    <a
+                      href="mailto:contact@usmile.com"
+                      className="bg-[#393939] text-white px-6 py-3 rounded-lg text-sm font-semibold tracking-wider flex items-center gap-2 hover:bg-[#2a2a2a] transition-all duration-300 uppercase"
+                    >
                       EN SAVOIR PLUS
                       <span className="text-lg">→</span>
-                    </button>
+                    </a>
                   </div>
                 </div>
               ))}
@@ -162,10 +165,13 @@ export default function FormationsPage() {
                   </div>
 
                   <div className="flex justify-start mt-8">
-                    <button className="bg-[#393939] text-white px-6 py-3 rounded-lg text-sm font-semibold tracking-wider flex items-center gap-2 hover:bg-[#2a2a2a] transition-all duration-300 uppercase">
+                    <a
+                      href="mailto:contact@usmile.com"
+                      className="bg-[#393939] text-white px-6 py-3 rounded-lg text-sm font-semibold tracking-wider flex items-center gap-2 hover:bg-[#2a2a2a] transition-all duration-300 uppercase"
+                    >
                       EN SAVOIR PLUS
                       <span className="text-lg">→</span>
-                    </button>
+                    </a>
                   </div>
                 </div>
               ))}
