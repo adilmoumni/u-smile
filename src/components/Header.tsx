@@ -122,7 +122,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
-              src="/images/logos/USMILE LOGO Horizontal - Black_1.svg"
+              src="/images/logos/logo-u-smile.svg"
               alt="U-Smile Orthodontie"
               width={140}
               height={70}
@@ -195,7 +195,7 @@ export default function Header() {
 
             <div className="mb-10 mt-6 flex justify-center">
               <Image
-                src="/images/logos/USMILE LOGO Horizontal - Black_1.svg"
+                src="/images/logos/logo-u-smile.svg"
                 alt="U-Smile Orthodontie"
                 width={140}
                 height={40}

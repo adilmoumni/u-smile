@@ -25,7 +25,7 @@ export async function POST(request: Request) {
     }
 
     // Read logo file
-    const logoPath = path.join(process.cwd(), 'public/images/logos', 'USMILE LOGO Horizontal - Black_1.svg');
+    const logoPath = path.join(process.cwd(), 'public/images/logos', 'logo-u-smile.svg');
     const logoBuffer = fs.readFileSync(logoPath);
 
     // Configure Nodemailer transporter

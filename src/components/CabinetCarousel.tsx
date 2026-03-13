@@ -20,23 +20,19 @@ export default function CabinetCarousel() {
     setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
-  };
-
   useEffect(() => {
     const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="bg-white pt-32 pb-16 sm:pt-40 sm:pb-24 overflow-hidden w-full relative">
+    <section id="cabinet-carousel" className="bg-white pt-6 pb-2 sm:pt-10 sm:pb-4 overflow-hidden w-full relative">
       <div className="w-full">
         {/* Main Carousel Viewport - Using 100vw to ensure full page width */}
-        <div className="relative flex items-center justify-center h-[500px] sm:h-[800px] w-screen left-1/2 -ml-[50vw]">
+        <div className="relative flex items-center justify-center h-[230px] sm:h-[300px] lg:h-[330px] w-screen left-1/2 -ml-[50vw]">
           {carouselImages.map((image, index) => {
             let offset = index - currentIndex;
-            
+
             // Handle Looping
             if (offset < -Math.floor(carouselImages.length / 2)) offset += carouselImages.length;
             if (offset > Math.floor(carouselImages.length / 2)) offset -= carouselImages.length;
@@ -56,31 +52,31 @@ export default function CabinetCarousel() {
 
             const opacity = 1 - Math.abs(offset) * 0.25;
             const zIndex = 30 - Math.abs(offset) * 10;
-            
+
             // vw-based translateX for consistent 100% width coverage
-            // Adjusted to 18vw to ensure 5 items are visible within the viewport
-            const translateX = offset * 18; 
+            // Keep side cards visible while preserving center dominance.
+            const translateX = offset * 14;
 
             return (
               <div
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`absolute left-1/2 top-1/2 -translate-y-1/2 transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] cursor-pointer overflow-hidden rounded-2xl shadow-2xl ${
+                className={`absolute left-1/2 top-1/2 transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] cursor-pointer overflow-hidden rounded-2xl shadow-2xl ${
                   isCenter ? "shadow-dark-taupe/30" : "shadow-none"
                 }`}
                 style={{
                   transform: `translate(calc(-50% + ${translateX}vw), -50%) scale(${scale})`,
                   opacity: opacity,
                   zIndex: zIndex,
-                  width: isCenter ? "min(90%, 550px)" : "min(80%, 450px)",
-                  aspectRatio: "4/5",
+                  width: isCenter ? "min(84vw, 520px)" : "min(70vw, 380px)",
+                  aspectRatio: "16/9",
                 }}
               >
                 <Image
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className={`object-cover transition-all duration-1000 ${!isCenter ? "blur-[2px] grayscale-[15%]" : ""}`}
+                  className={`object-cover object-[center_38%] transition-all duration-1000 ${!isCenter ? "blur-[2px] grayscale-[15%]" : ""}`}
                 />
               </div>
             );
@@ -88,7 +84,7 @@ export default function CabinetCarousel() {
         </div>
 
         {/* Navigation Dots */}
-        <div className="mt-2 sm:mt-4 flex justify-center items-center gap-4">
+        <div className="mt-1 sm:mt-2 flex justify-center items-center gap-4">
           {carouselImages.map((_, index) => (
             <button
               key={index}
@@ -98,12 +94,12 @@ export default function CabinetCarousel() {
               }`}
               aria-label={`Go to slide ${index + 1}`}
             >
-              <span 
+              <span
                 className={`absolute inset-0 rounded-full border border-dark-taupe/40 transition-all duration-500 ${
                   index === currentIndex ? "scale-[1.6] border-dark-taupe" : "scale-100"
                 }`}
               />
-              <span 
+              <span
                 className={`w-full h-full rounded-full transition-all duration-500 ${
                   index === currentIndex ? "bg-dark-taupe scale-100" : "bg-transparent scale-0"
                 }`}
