@@ -11,7 +11,7 @@ export const metadata = {
 const teamSections = [
    {
       title: "Une équipe spécialisée",
-      icon: "/images/icon/team/network.png",
+      icon: "/images/icon/team/network.svg",
       content: "Notre équipe est composée de professionnels spécialisés, chacun intervenant à son niveau d'expertise pour garantir une prise en charge globale et cohérente :",
       contentMobile: "Une équipe pluridisciplinaire unie pour votre sourire : accueil, assistantes qualifiées et praticiens spécialisés.",
       list: ["Équipe d'accueil", "Assistantes dentaires qualifiées", "Coordinatrice de traitement", "Orthodontiste spécialiste"],
@@ -19,13 +19,13 @@ const teamSections = [
    },
    {
       title: "Une expertise de pointe",
-      icon: "/images/icon/team/certificate.png",
+      icon: "/images/icon/team/certificate.svg",
       content: "U.Smile Orthodontie s'appuie sur une expertise construite autour d'une pratique dédiée à l'orthodontie, exigeante et cohérente, commune à l'ensemble de ses centres. Chaque prise en charge repose sur une vision globale du sourire, du visage et des fonctions oro-faciales, intégrée dès la première consultation.\n\nÀ travers ses équipes et ses protocoles de soins, U.Smile Orthodontie a accompagné plus de 4 000 patients, en combinant expertise clinique, technologies numériques avancées et planification thérapeutique personnalisée. Cette approche structurée permet de proposer des traitements précis, évolutifs et adaptés aux besoins spécifiques de chaque patient, à tous les âges.",
       contentMobile: "Fort de 4 000 patients accompagnés, U.Smile combine expertise clinique et technologies numériques pour des soins personnalisés et évolutifs.",
    },
    {
       title: "Un suivi personnalisé",
-      icon: "/images/icon/team/handshake.png",
+      icon: "/images/icon/team/handshake.svg",
       content: "Chez U.Smile Orthodontie, l'accompagnement du patient constitue un véritable pilier de notre approche et un élément distinctif du cabinet. De la première consultation au suivi post-traitement, chaque étape du parcours est pensée pour offrir une expérience fluide, claire et rassurante.\n\nL'équipe accorde une attention particulière à l'écoute, à la pédagogie et à la disponibilité, afin que chaque patient comprenne son traitement, se sente guidé dans ses choix et accompagné tout au long de son évolution.",
       contentMobile: "De la première consultation au suivi final, nous privilégions l’écoute et la pédagogie pour un accompagnement serein et une relation de confiance.",
    },

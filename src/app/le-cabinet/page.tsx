@@ -21,7 +21,7 @@ export default function LeCabinet() {
         <CabinetDetails />
 
         {/* Dr. Charafa's Profile */}
-        <TeamSection doctorName="Charafa" />
+        <TeamSection/>
 
         {/* Appointment Form */}
         <AppointmentForm />

@@ -29,7 +29,7 @@ export default function Footer() {
           <div className="flex flex-col gap-6">
             <Link href="/">
               <Image
-                src="/images/logos/USMILE LOGO Horizontal - White_1.svg"
+                src="/images/logos/logo-white-u-smile.svg"
                 alt="U-Smile Orthodontie"
                 width={175}
                 height={50}
@@ -37,22 +37,13 @@ export default function Footer() {
             </Link>
             {/* Partner logos (text placeholders matching the reference) */}
             <div className="mt-4 flex flex-col gap-4">
-              <div className="flex items-center gap-2">
-                <span className="text-lg font-bold text-white/60 tracking-tight">
-                  iTero
-                </span>
-                <span className="text-[9px] uppercase tracking-wider text-white/35 leading-tight block">
-                  Digital<br />Practice
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-lg font-bold text-white/60 tracking-tight">
-                  ✦ invisalign
-                </span>
-                <span className="text-[9px] uppercase tracking-wider text-white/35 block">
-                  Provider
-                </span>
-              </div>
+              <Image
+                src="/images/icon/for-kids.svg"
+                alt="Invisalign Icon"
+                width={120}
+                height={120}
+                className="object-contain"
+              />
             </div>
           </div>
 

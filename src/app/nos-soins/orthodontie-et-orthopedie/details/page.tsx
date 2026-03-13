@@ -11,13 +11,13 @@ export default function OrthodontieDetailsPage() {
   return (
     <>
       <Header />
-      
+
       <main className="pt-20 bg-white min-h-screen">
         {/* Full-width Hero Banner with Organic Shape */}
         <section className="relative px-6 lg:px-8 pt-10 pb-20 overflow-hidden mt-20">
           <div className="mx-auto max-w-7xl relative">
-            <div className="relative h-[400px] lg:h-[600px] w-full overflow-hidden border border-[#393939]" 
-                 style={{ borderRadius: '0 15rem 0 15rem' }}>
+            <div className="relative h-[400px] lg:h-[600px] w-full overflow-hidden border border-[#393939]"
+              style={{ borderRadius: '0 15rem 0 15rem' }}>
               <Image
                 src="/images/cabinet/consultation-hero.jpeg"
                 alt="Orthodontie et Orthopédie Dento-Faciale"
@@ -47,13 +47,16 @@ export default function OrthodontieDetailsPage() {
         </section>
 
         <section className="mx-auto max-w-7xl px-6 lg:px-8 pb-32">
-          
+
           {/* Section 1: Pédiatrique (Numbered Card) */}
           <div className="mb-24">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-12 bg-[#a59c94] text-white flex items-center justify-center rounded-lg font-bold text-xl">
-                1.
-              </div>
+              <Image
+                src="/images/icon/steps/1.svg"
+                alt="Stabilité du traitement"
+                width={60}
+                height={60}
+              />
               <div className="flex flex-col">
                 <span className="text-[#393939]/60 text-sm font-bold uppercase tracking-wider">Pédiatrique, Enfant & Adolescent</span>
                 <h2 className="text-3xl lg:text-4xl font-light text-[#393939] font-serif">
@@ -102,9 +105,12 @@ export default function OrthodontieDetailsPage() {
           {/* Section 2: Numbered Card */}
           <div className="mb-24">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-12 bg-[#a59c94] text-white flex items-center justify-center rounded-lg font-bold text-xl">
-                2.
-              </div>
+              <Image
+                src="/images/icon/steps/2.svg"
+                alt="Stabilité du traitement"
+                width={60}
+                height={60}
+              />
               <div className="flex flex-col">
                 <span className="text-[#393939]/60 text-sm font-bold uppercase tracking-wider">Pédiatrique, Enfant & Adolescent</span>
                 <h2 className="text-3xl lg:text-4xl font-light text-[#393939] font-serif">
@@ -152,9 +158,12 @@ export default function OrthodontieDetailsPage() {
           {/* Section 3: Numbered Card */}
           <div className="mb-32">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-12 bg-[#a59c94] text-white flex items-center justify-center rounded-lg font-bold text-xl">
-                3.
-              </div>
+              <Image
+                src="/images/icon/steps/3.svg"
+                alt="Stabilité du traitement"
+                width={60}
+                height={60}
+              />
               <div className="flex flex-col">
                 <span className="text-[#393939]/60 text-sm font-bold uppercase tracking-wider">Pédiatrique, Enfant & Adolescent</span>
                 <h2 className="text-3xl lg:text-4xl font-light text-[#393939] font-serif">
@@ -178,7 +187,7 @@ export default function OrthodontieDetailsPage() {
                   <p className="text-[#393939]/80 font-light text-lg">
                     À l&apos;adolescence, la croissance est à son maximal mais commence à se ralentir dès l&apos;âge de 13-14ans, mais reste toujours active. À cet âge, le traitement orthodontique se fait en une seule phase, visant à corriger simultanément : l&apos;alignement des dents, et les déséquilibres squelettiques présents.
                   </p>
-                  
+
                   <div className="space-y-4">
                     <p className="font-bold text-[#393939] text-xl">Chez U.smile Orthodontie,</p>
                     <p className="text-[#393939]/80 font-light text-lg italic">le traitement pourra être réalisé par :</p>
@@ -202,20 +211,25 @@ export default function OrthodontieDetailsPage() {
         <section className="bg-[#96928E] py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="flex items-center gap-4 mb-16 px-4">
-               <div className="w-12 h-12 bg-white rounded-tl-full" />
-               <h2 className="text-4xl lg:text-5xl font-light text-white font-serif">
-                 Orthodontie de l&apos;Adulte
-               </h2>
+              <Image
+                src="/images/icon/steps/empty-white.svg"
+                alt="Stabilité du traitement"
+                width={60}
+                height={60}
+              />
+              <h2 className="text-4xl lg:text-5xl font-light text-white font-serif">
+                Orthodontie de l&apos;Adulte
+              </h2>
             </div>
-            
-            <div className="relative w-full aspect-[21/9] mb-20 overflow-hidden" 
-                 style={{ borderRadius: '1.5rem 1.5rem 12rem 1.5rem' }}>
-               <Image
-                 src="/images/cabinet/photography.png"
-                 alt="Orthodontie Adulte"
-                 fill
-                 className="object-cover"
-               />
+
+            <div className="relative w-full aspect-[21/9] mb-20 overflow-hidden"
+              style={{ borderRadius: '0 12rem 0 12rem' }}>
+              <Image
+                src="/images/cabinet/adult-smile.jpg"
+                alt="Orthodontie Adulte"
+                fill
+                className="object-cover"
+              />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-32 text-white/90 font-light text-lg leading-relaxed">
@@ -227,7 +241,7 @@ export default function OrthodontieDetailsPage() {
               </div>
               <div className="space-y-10">
                 <p>
-                   Les traitements proposés chez U.smile Orthodontie sont discrets et personnalisés, réalisés soit par :
+                  Les traitements proposés chez U.smile Orthodontie sont discrets et personnalisés, réalisés soit par :
                 </p>
                 <div className="space-y-4">
                   <p><span className="font-bold italic">• Aligneurs Invisalign,</span></p>
@@ -245,20 +259,25 @@ export default function OrthodontieDetailsPage() {
         <section className="bg-[#96928E] py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="flex items-center gap-4 mb-16 px-4">
-               <div className="w-12 h-12 bg-white rounded-tl-full" />
-               <h2 className="text-4xl lg:text-5xl font-light text-white font-serif">
-                 Orthodontie du Senior
-               </h2>
+              <Image
+                src="/images/icon/steps/empty-white.svg"
+                alt="Stabilité du traitement"
+                width={60}
+                height={60}
+              />
+              <h2 className="text-4xl lg:text-5xl font-light text-white font-serif">
+                Orthodontie du Senior
+              </h2>
             </div>
-            
-            <div className="relative w-full aspect-[21/9] mb-20 overflow-hidden" 
-                 style={{ borderRadius: '1.5rem 1.5rem 1.5rem 12rem' }}>
-               <Image
-                 src="/images/cabinet/radiology.png"
-                 alt="Orthodontie Senior"
-                 fill
-                 className="object-cover"
-               />
+
+            <div className="relative w-full aspect-[21/9] mb-20 overflow-hidden"
+              style={{ borderRadius: '0 12rem 0 12rem' }}>
+              <Image
+                src="/images/cabinet/senior-smile.jpg"
+                alt="Orthodontie Senior"
+                fill
+                className="object-cover"
+              />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-32 text-white/90 font-light text-lg leading-relaxed">
@@ -276,9 +295,9 @@ export default function OrthodontieDetailsPage() {
                   Ces ajustements contribuent à préserver la santé des dents et des gencives, tout en favorisant une alimentation plus équilibrée. L&apos;orthodontie peut également accompagner ou préparer des réhabilitations prothétiques, en créant des conditions optimales pour la pose de couronnes, de bridges ou d&apos;implants.
                 </p>
                 <div className="pt-6 border-t border-white/10">
-                   <p className="text-white/80 text-base leading-relaxed">
+                  <p className="text-white/80 text-base leading-relaxed">
                     Grâce aux techniques d&apos;orthodontie moderne, les traitements chez le senior utilisent des forces douces et contrôlées, avec des durées optimisées, généralement limitées à quelques mois, afin d&apos;assurer efficacité, confort et stabilité.
-                   </p>
+                  </p>
                 </div>
               </div>
             </div>
