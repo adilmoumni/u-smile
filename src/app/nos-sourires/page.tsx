@@ -8,16 +8,20 @@ export const metadata = {
 };
 
 const SmileComparison = ({ avant, apres, category }: { avant: string, apres: string, category: string }) => (
-  <section className="mb-24 last:mb-0">
-    <div className="flex items-center gap-4 mb-10">
-      <div className="h-[1px] flex-1 bg-dark-taupe/10" />
-      <h2 className="text-3xl font-serif text-dark-taupe px-4">{category}</h2>
-      <div className="h-[1px] flex-1 bg-dark-taupe/10" />
+  <div className="relative mb-20 last:mb-0 border border-dark-taupe/20 rounded-lg p-6 sm:p-10 pt-12 sm:pt-14 bg-white">
+    {/* Category Label at Top Left Group Border */}
+    <div className="absolute top-0 left-8 -translate-y-1/2 bg-white px-4">
+      <h2 className="text-2xl font-bold text-dark-taupe font-serif"
+        style={{ fontFamily: 'var(--font-sofia-pro), sans-serif', fontStyle: 'normal' }}
+      >
+        {category}
+      </h2>
     </div>
-    
-    <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
-      <div className="space-y-4">
-        <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-sm border border-dark-taupe/5">
+
+    <div className="grid md:grid-cols-[1fr_auto_1fr] gap-6 sm:gap-10 items-stretch">
+      {/* Avant Section */}
+      <div className="space-y-6 flex flex-col items-center">
+        <div className="relative w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden">
           <Image
             src={avant}
             alt={`${category} - Avant`}
@@ -25,11 +29,14 @@ const SmileComparison = ({ avant, apres, category }: { avant: string, apres: str
             className="object-cover"
           />
         </div>
-        <p className="text-sm uppercase tracking-widest text-[#393939]/40 font-medium text-center">Avant</p>
       </div>
-      
-      <div className="space-y-4">
-        <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg border border-dark-taupe/5">
+
+      {/* Vertical Divider (Desktop) */}
+      <div className="hidden md:block w-px bg-dark-taupe/10 self-stretch" />
+
+      {/* Après Section */}
+      <div className="space-y-6 flex flex-col items-center">
+        <div className="relative w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden">
           <Image
             src={apres}
             alt={`${category} - Après`}
@@ -37,17 +44,33 @@ const SmileComparison = ({ avant, apres, category }: { avant: string, apres: str
             className="object-cover"
           />
         </div>
-        <p className="text-sm uppercase tracking-widest text-dark-taupe font-medium text-center">Après</p>
       </div>
     </div>
-  </section>
+
+    {/* Footer with Labels and Indicator */}
+    <div className="mt-8 flex items-center justify-between px-2 sm:px-6">
+      <span className="text-sm sm:text-xl font-light text-[#393939]">Avant</span>
+
+      <div className="flex-1 mx-4 sm:mx-8 flex items-center justify-center gap-3">
+        <div className="flex-1 h-[0.5px] bg-dark-taupe/30" />
+        <div className="flex items-center gap-1.5 text-dark-taupe/40">
+          <span className="text-[10px]">&lt;</span>
+          <div className="w-1.5 h-1.5 rounded-full bg-dark-taupe/60" />
+          <span className="text-[10px]">&gt;</span>
+        </div>
+        <div className="flex-1 h-[0.5px] bg-dark-taupe/30" />
+      </div>
+
+      <span className="text-sm sm:text-xl font-light text-[#393939]">Après</span>
+    </div>
+  </div>
 );
 
 export default function NosSourires() {
   return (
     <>
       <Header />
-      
+
       <main className="pt-20 bg-white">
         {/* Hero Section */}
         <section className="py-24 bg-[#F0FBFF] rounded-lg mx-20 mt-20 overflow-hidden">
@@ -56,9 +79,9 @@ export default function NosSourires() {
               Votre plus beau <br /> <span className="font-bold">Smile</span> commence avec nous.
             </h1>
             <p className="mt-8 text-lg text-[#393939] font-light max-w-3xl leading-relaxed">
-              Parce que chaque sourire est unique, nous prenons à cœur de partager avec vous les résultats obtenus chez 
-              <span className="font-bold"> U-Smile Orthodontie</span>. Ces transformations témoignent de notre engagement quotidien, à vos côtés, 
-              à chaque étape de la vie. Ces sourires représentent des traitements personnalisés, réalisés avec une approche fondée sur 
+              Parce que chaque sourire est unique, nous prenons à cœur de partager avec vous les résultats obtenus chez
+              <span className="font-bold"> U-Smile Orthodontie</span>. Ces transformations témoignent de notre engagement quotidien, à vos côtés,
+              à chaque étape de la vie. Ces sourires représentent des traitements personnalisés, réalisés avec une approche fondée sur
               l'expertise, l'écoute et l'utilisation des meilleures technologies.
             </p>
           </div>
@@ -66,28 +89,28 @@ export default function NosSourires() {
 
         {/* Comparison Sections */}
         <div className="mx-auto max-w-6xl px-6 lg:px-8 py-24">
-          <SmileComparison 
+          <SmileComparison
             category="Enfant"
-            avant="/images/sourires/Smile 1 Avant.png"
-            apres="/images/sourires/Smile 1 Après.png"
+            avant="/images/sourires/smile 13 avant.png"
+            apres="/images/sourires/smile 13 après.png"
           />
-          
-          <SmileComparison 
+
+          <SmileComparison
             category="Adolescent"
             avant="/images/sourires/smile 3 avant.png"
             apres="/images/sourires/smile 3 après.png"
           />
-          
-          <SmileComparison 
+
+          <SmileComparison
             category="Adulte"
-            avant="/images/sourires/smile 4 avant.png"
-            apres="/images/sourires/smile 4 après.png"
-          />
-          
-          <SmileComparison 
-            category="Senior"
             avant="/images/sourires/smile 8 avant.png"
-            apres="/images/sourires/smile 8 Après.png"
+            apres="/images/sourires/smile 8 après.png"
+          />
+
+          <SmileComparison
+            category="Senior"
+            avant="/images/sourires/smile 9 avant.png"
+            apres="/images/sourires/smile 9 Après.png"
           />
         </div>
       </main>

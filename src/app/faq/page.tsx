@@ -165,17 +165,13 @@ export default function FAQPage() {
       
       <main className="pt-20 bg-[#fbfaf8]">
         {/* Hero Section */}
-        <section className="py-24 text-center px-6">
-          <div className="inline-flex items-center rounded-full bg-white px-4 py-1.5 border border-dark-taupe/10 shadow-sm mb-8">
-            <span className="text-[11px] font-bold uppercase tracking-widest text-dark-taupe/60">FAQ</span>
+        <section className="pt-24 pb-10 text-start max-w-4xl mx-auto px-6">
+          <div className="inline-flex items-center rounded-lg bg-white px-6 py-1.5 border-[0.5px] border-dark-taupe mb-8">
+            <span className="text-[11px] uppercase tracking-widest text-dark-taupe">FAQ</span>
           </div>
           <h1 className="text-4xl lg:text-6xl font-light text-dark-taupe font-serif mb-6">
             Foire Aux Questions
           </h1>
-          <p className="max-w-2xl mx-auto text-lg text-[#393939] font-light leading-relaxed">
-            Retrouvez ici les réponses aux questions les plus fréquentes sur l'orthodontie, 
-            nos traitements et le déroulement de votre parcours chez U-Smile.
-          </p>
         </section>
 
         {/* FAQ Grid */}
@@ -184,8 +180,6 @@ export default function FAQPage() {
             <FAQCategorySection key={idx} category={category} />
           ))}
         </section>
-
-        <AppointmentForm />
       </main>
 
       <Footer />

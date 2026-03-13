@@ -16,7 +16,7 @@ const services: { title: React.ReactNode; alt: string; icon: string, link: strin
     ),
     alt: "Consultation et Diagnostic",
     icon: "/images/icon/1.svg",
-    link: "/nos-soins"
+    link: "/nos-soins/consultation"
   },
   {
     title: (
@@ -32,7 +32,7 @@ const services: { title: React.ReactNode; alt: string; icon: string, link: strin
     ),
     alt: "Stabilité du traitement et Réhabilitation Fonctionnelle",
     icon: "/images/icon/2.svg",
-    link: "/nos-soins"
+    link: "/nos-soins/stabilite-et-rehabilitation"
   },
   {
     title: (
@@ -46,7 +46,7 @@ const services: { title: React.ReactNode; alt: string; icon: string, link: strin
     ),
     alt: "Orthodontie et Orthopédie Dento-Faciale",
     icon: "/images/icon/2.svg",
-    link: "/nos-soins"
+    link: "/nos-soins/orthodontie-et-orthopedie"
   },
   {
     title: (
@@ -58,7 +58,7 @@ const services: { title: React.ReactNode; alt: string; icon: string, link: strin
     ),
     alt: "Apnée du sommeil",
     icon: "/images/icon/3.svg",
-    link: "/nos-soins"
+    link: "/nos-soins/apnee-du-sommeil"
   },
 ];
 

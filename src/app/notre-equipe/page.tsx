@@ -84,7 +84,7 @@ export default function NotreEquipe() {
                           {section.title}
                        </h3>
                        
-                       <div className="grid lg:grid-cols-2 gap-12">
+                       <div className="grid gap-12">
                           <div className="space-y-8">
                              <p className="text-[#393939] font-light leading-relaxed whitespace-pre-line">
                                 {section.content}

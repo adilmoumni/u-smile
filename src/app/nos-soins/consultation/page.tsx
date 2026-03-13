@@ -15,15 +15,15 @@ export default function StabilitePage() {
   return (
     <>
       <Header />
-      
+
       <main className="pt-20">
         <SoinDetail
           categoryTitle="Consultation et Diagnostic"
-          title={<>Assurer la durabilité <br /> et l'équilibre des résultats.</>}
-          description="La stabilité ou contention est une étape essentielle pour préserver les résultats du traitement orthodontique dans le temps. La contention et la réhabilitation fonctionnelle contribuent à maintenir un équilibre durable de la denture, en tenant compte des fonctions orales et de l’harmonie globale du système oro-facial."
+          title={<>Comprendre,<br /> analyser, personnaliser.</>}
+          description="Chez U.Smile Orthodontie, la consultation initiale intègre un bilan orthodontique complet pour poser les bases d'un traitement sur mesure. Un examen clinique approfondi, une empreinte optique dentaire iTero en 3D, une prise de photographies et de radiographies ainsi qu'un bilan postural vous seront proposés, afin d'établir un diagnostic global et précis. Dès votre arrivée, notre coordinatrice de traitement vous accompagne et vous guide à chaque étape pour une prise en charge claire, sereine et personnalisée."
           icon={
-           <Image
-              src="/images/icon/home/stabilite.svg"
+            <Image
+              src="/images/icon/home/consultation.svg"
               alt="Consultation et Diagnostic"
               width={70}
               height={70}
