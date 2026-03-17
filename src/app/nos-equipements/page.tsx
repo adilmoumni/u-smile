@@ -12,7 +12,7 @@ const equipments = [
    {
       title: "Caméra intra-orale iTero – Empreinte dentaire 3D",
       description: "Des empreintes confortables et précises sans pâte, avec une visualisation immédiate de votre sourire.",
-      image: "/images/cabinet/equipement/3.png",
+      image: "/images/cabinet/equipement/6.png",
    },
    {
       title: "Ortho Podo Metric (OPM)",
@@ -27,7 +27,7 @@ const equipments = [
    {
       title: "Photographie Numérique",
       description: "Un suivi clair et rigoureux de l'évolution de votre traitement.",
-      image: "/images/cabinet/equipement/6.png",
+      image: "/images/cabinet/equipement/3.png",
    },
    {
       title: "Plieuse de fil de contention 3D",

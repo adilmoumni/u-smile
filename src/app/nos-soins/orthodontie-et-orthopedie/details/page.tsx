@@ -200,7 +200,7 @@ export default function OrthodontieDetailsPage() {
                   </div>
                 </div>
               </div>
-              <div className="mt-12 p-8 text-[#393939]/80 text-center font-light">
+              <div className="mt-12 p-8 text-[#393939]/80 text-start font-bold text-lg">
                 Une attention particulière est également portée à la réhabilitation fonctionnelle (respiration, posture linguale, déglutition, mauvaises habitudes), essentielle pour assurer la stabilité des résultats dans le temps.
               </div>
             </div>

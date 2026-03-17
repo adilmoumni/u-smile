@@ -222,16 +222,26 @@ export default function Header() {
             {/* Mobile Contact Info */}
             <div className="mt-8 pt-8 border-t border-white/10 space-y-6">
               <div className="space-y-3 text-sm text-white/60 leading-relaxed">
-                <p>
+                <a 
+                  href="https://maps.app.goo.gl/MsMVt8btA8Sv8cDC8?g_st=aw" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block hover:text-white transition-colors"
+                >
                   6 Rue Abou Zaid Eddaboussi, Vélodrome.
                   <br />
                   Casablanca, 20000
-                </p>
-                <p>
+                </a>
+                <a 
+                  href="https://maps.app.goo.gl/jLKrRiRUNE5VBKVdA?g_st=iw" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block hover:text-white transition-colors"
+                >
                   Rés Malak 4 – 1<sup>er</sup> Étage Bureau N° 15 –
                   <br />
                   Bouskoura Ville Verte
-                </p>
+                </a>
               </div>
 
               <div className="flex flex-col gap-3">

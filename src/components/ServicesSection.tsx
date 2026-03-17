@@ -21,6 +21,20 @@ const services: { title: React.ReactNode; alt: string; icon: string, link: strin
   {
     title: (
       <>
+        Orthodontie et
+        <br />
+        Orthopédie Dento-
+        <br />
+        Faciale
+      </>
+    ),
+    alt: "Orthodontie et Orthopédie Dento-Faciale",
+    icon: "/images/icon/nos-soins/4.svg",
+    link: "/nos-soins/orthodontie-et-orthopedie"
+  },
+  {
+    title: (
+      <>
         Stabilité
         <br />
         du traitement
@@ -33,20 +47,6 @@ const services: { title: React.ReactNode; alt: string; icon: string, link: strin
     alt: "Stabilité du traitement et Réhabilitation Fonctionnelle",
     icon: "/images/icon/nos-soins/1.svg",
     link: "/nos-soins/stabilite-et-rehabilitation"
-  },
-  {
-    title: (
-      <>
-        Orthodontie et
-        <br />
-        Orthopédie Dento-
-        <br />
-        Faciale
-      </>
-    ),
-    alt: "Orthodontie et Orthopédie Dento-Faciale",
-    icon: "/images/icon/nos-soins/4.svg",
-    link: "/nos-soins/orthodontie-et-orthopedie"
   },
   {
     title: (
@@ -98,7 +98,7 @@ export default function ServicesSection() {
                     </div>
                   </div>
                 </div>
-                <h3 
+                <h3
                   className="text-xl font-bold text-dark-taupe leading-snug mb-4"
                   style={{ fontFamily: 'var(--font-sofia-pro), sans-serif', fontStyle: 'normal' }}
                 >

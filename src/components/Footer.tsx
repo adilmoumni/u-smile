@@ -100,16 +100,26 @@ export default function Footer() {
             <div className="space-y-5">
               {/* Addresses */}
               <div className="space-y-3 text-sm text-white leading-relaxed">
-                <p>
+                <a 
+                  href="https://maps.app.goo.gl/MsMVt8btA8Sv8cDC8?g_st=aw" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block hover:text-white transition-colors"
+                >
                   6 Rue Abou Zaid Eddaboussi, Vélodrome.
                   <br />
                   Casablanca, 20000
-                </p>
-                <p>
+                </a>
+                <a 
+                  href="https://maps.app.goo.gl/jLKrRiRUNE5VBKVdA?g_st=iw" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block hover:text-white transition-colors"
+                >
                   Rés Malak 4 – 1<sup>er</sup> Étage Bureau N° 15 –
                   <br />
                   Bouskoura Ville Verte
-                </p>
+                </a>
               </div>
 
               {/* Phone */}

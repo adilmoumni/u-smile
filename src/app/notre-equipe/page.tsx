@@ -14,7 +14,7 @@ const teamSections = [
       icon: "/images/icon/team/network.svg",
       content: "Notre équipe est composée de professionnels spécialisés, chacun intervenant à son niveau d'expertise pour garantir une prise en charge globale et cohérente :",
       contentMobile: "Une équipe pluridisciplinaire unie pour votre sourire : accueil, assistantes qualifiées et praticiens spécialisés.",
-      list: ["Équipe d'accueil", "Assistantes dentaires qualifiées", "Coordinatrice de traitement", "Orthodontiste spécialiste"],
+      list: ["Orthodontiste spécialiste", "Coordinatrice", "Équipe d'accueil", "Assistantes dentaires qualifiées"],
       secondaryText: "Cette organisation permet d'assurer un suivi fluide, structuré et personnalisé à chaque étape du traitement.",
    },
    {
