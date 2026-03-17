@@ -4,6 +4,7 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import SectionBadge from "./SectionBadge";
 
 const services: { title: React.ReactNode; alt: string; icon: string, link: string }[] = [
   {
@@ -68,9 +69,7 @@ export default function ServicesSection() {
     <section id="services" className="bg-[#a59c94] py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-16">
-          <span className="inline-block rounded-lg border border-white/20 px-8 py-1.5 text-xs font-semibold tracking-wider text-white uppercase mb-6">
-            NOS SOINS
-          </span>
+          <SectionBadge title="NOS SOINS" light className="mb-6" />
           <h2 className="text-4xl sm:text-5xl font-light text-white leading-tight font-serif max-w-2xl"
           >
             Accompagner <span className="font-bold">le sourire </span> à chaque étape de la vie.

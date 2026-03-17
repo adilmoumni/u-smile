@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import SectionBadge from "./SectionBadge";
 
 const testimonials = [
   {
@@ -94,9 +95,7 @@ export default function TestimonialsSection({ isTemoignages = false }) {
     <section id="testimonials" className="bg-[#fdfcfb] py-24 lg:py-32 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-16">
-          <span className="inline-block rounded-lg bg-white border-[0.5px] text-dark-taupe px-4 py-1.5 text-xs font-semibold tracking-wider text-dark-taupe uppercase mb-6">
-            TÉMOIGNAGES
-          </span>
+          <SectionBadge title="TÉMOIGNAGES" className="mb-6" />
           <h2 className="text-4xl sm:text-5xl font-light text-dark-taupe leading-tight">
             {isTemoignages ? "Nos patients satistfaits" : "Nos participants satisfaits"}
           </h2>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SectionBadge from "@/components/SectionBadge";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import AppointmentForm from "@/components/AppointmentForm";
 import { GraduationCap, Video, School, Globe, Users } from "lucide-react";
@@ -101,9 +102,7 @@ export default function FormationsPage() {
         <section className="py-24 lg:py-32 bg-[#F0FBFF]">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mb-16">
-              <span className="inline-block border-[0.5px] border-dark-taupe/20 rounded-lg px-6 py-2 text-[10px] font-bold tracking-widest uppercase text-[#393939] mb-12">
-                LES FORMATIONS
-              </span>
+              <SectionBadge title="LES FORMATIONS" className="mb-12" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
@@ -142,9 +141,7 @@ export default function FormationsPage() {
         <section className="py-24 lg:py-32 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mb-16">
-              <span className="inline-block border-[0.5px] border-dark-taupe/20 rounded-lg px-6 py-2 text-[10px] font-bold tracking-widest uppercase text-[#393939] mb-12">
-                LES ÉVÈNEMENTS
-              </span>
+              <SectionBadge title="LES ÉVÈNEMENTS" className="mb-12" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">

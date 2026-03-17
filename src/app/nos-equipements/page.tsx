@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AppointmentForm from "@/components/AppointmentForm";
 import Image from "next/image";
+import SectionBadge from "@/components/SectionBadge";
 
 export const metadata = {
    title: "Nos Équipements | U-Smile Orthodontie",
@@ -73,9 +74,7 @@ export default function NosEquipements() {
                {/* Grid Section */}
                <section className="py-24">
                   <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                     <span className="inline-block rounded-lg border-[0.5px] border-dark-taupe/20 px-4 py-1.5 text-xs font-semibold tracking-wider text-dark-taupe uppercase mb-6">
-                        NOS ÉQUIPEMENTS
-                     </span>
+                    <SectionBadge title="NOS ÉQUIPEMENTS" className="mb-6" />
                      <div className="grid md:grid-cols-2 gap-x-30 gap-y-16 justify-items-center ">
                         {equipments.map((item, idx) => (
                            <div key={idx} className="w-full group border-[0.25px] border-[#393939]/50 rounded-lg overflow-hidden bg-white transition-all duration-500">

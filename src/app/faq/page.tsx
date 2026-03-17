@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SectionBadge from "@/components/SectionBadge";
 import AppointmentForm from "@/components/AppointmentForm";
 
 interface FAQItem {
@@ -166,9 +167,7 @@ export default function FAQPage() {
       <main className="pt-20 bg-[#fbfaf8]">
         {/* Hero Section */}
         <section className="pt-24 pb-10 text-start max-w-4xl mx-auto px-6">
-          <div className="inline-flex items-center rounded-lg bg-white px-6 py-1.5 border-[0.5px] border-dark-taupe mb-8">
-            <span className="text-[11px] uppercase tracking-widest text-dark-taupe">FAQ</span>
-          </div>
+          <SectionBadge title="FAQ" className="mb-8" />
           <h1 className="text-4xl lg:text-6xl font-light text-dark-taupe font-serif mb-6">
             Foire Aux Questions
           </h1>

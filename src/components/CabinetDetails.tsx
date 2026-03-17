@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import SectionBadge from "./SectionBadge";
 
 export default function CabinetDetails() {
   return (
@@ -21,9 +22,7 @@ export default function CabinetDetails() {
           
           <div className="flex flex-col justify-center">
             <div className="mb-10">
-              <span className="inline-block rounded-lg border-[0.5px] border-dark-taupe/20 px-4 py-1.5 text-xs font-semibold tracking-wider text-dark-taupe uppercase mb-6">
-                A PROPOS DU CABINET
-              </span>
+              <SectionBadge title="A PROPOS DU CABINET" className="mb-6" />
               <h2 className="text-4xl lg:text-5xl font-light text-dark-taupe leading-tight font-serif mb-8">
                 Chez U.Smile Orthodontie,
               </h2>
@@ -42,17 +41,13 @@ export default function CabinetDetails() {
         {/* Middle: Vision and Engagement */}
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 mb-24">
           <div>
-            <span className="inline-block rounded-lg border-[0.5px] border-dark-taupe/20 px-4 py-1.5 text-[10px] font-semibold tracking-wider text-dark-taupe uppercase mb-6">
-              NOTRE VISION
-            </span>
+            <SectionBadge title="NOTRE VISION" className="mb-6" />
             <p className="text-[#393939] font-light leading-relaxed">
               Corriger un sourire, c'est aussi améliorer la posture, la fonction masticatoire, la respiration et la qualité de vie. Nous vous accompagnons à tout âge avec des solutions personnalisées, évolutives et adaptées à votre développement.
             </p>
           </div>
           <div>
-            <span className="inline-block rounded-lg border-[0.5px] border-dark-taupe/20 px-4 py-1.5 text-[10px] font-semibold tracking-wider text-dark-taupe uppercase mb-6">
-              NOTRE ENGAGEMENT
-            </span>
+            <SectionBadge title="NOTRE ENGAGEMENT" className="mb-6" />
             <p className="text-[#393939] font-light leading-relaxed">
               Offrir un suivi attentif et clair, expliquer chaque étape du traitement et proposer des solutions en adéquation avec les avancées actuelles de l'orthodontie. Parce qu'un sourire vaut plus que mille mots.
             </p>
@@ -61,9 +56,7 @@ export default function CabinetDetails() {
 
         {/* Bottom: Values */}
         <div>
-          <span className="inline-block rounded-lg border-[0.5px] border-dark-taupe/20 px-4 py-1.5 text-[10px] font-semibold tracking-wider text-dark-taupe uppercase mb-10">
-            NOS VALEURS
-          </span>
+          <SectionBadge title="NOS VALEURS" className="mb-10" />
           <h3 className="text-4xl lg:text-5xl font-light text-dark-taupe font-serif mb-12 flex flex-wrap items-center gap-x-6 gap-y-4">
             Confiance <span className="w-2 h-2 bg-accent/30 rounded-full" /> Accompagnement <span className="w-2 h-2 bg-accent/30 rounded-full" /> Performance
           </h3>
