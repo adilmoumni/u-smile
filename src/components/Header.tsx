@@ -228,7 +228,7 @@ export default function Header() {
                   rel="noopener noreferrer"
                   className="block hover:text-white transition-colors"
                 >
-                  6 Rue Abou Zaid Eddaboussi, Vélodrome.
+                  <span className="font-bold underline">U.Smile Anfa :</span> 6 Rue Abou Zaid Eddaboussi, Vélodrome.
                   <br />
                   Casablanca, 20000
                 </a>
@@ -238,7 +238,7 @@ export default function Header() {
                   rel="noopener noreferrer"
                   className="block hover:text-white transition-colors"
                 >
-                  Rés Malak 4 – 1<sup>er</sup> Étage Bureau N° 15 –
+                  <span className="font-bold underline">U.Smile Bouskoura :</span> Rés Malak 4 – 1<sup>er</sup> Étage Bureau N° 15 –
                   <br />
                   Bouskoura Ville Verte
                 </a>
