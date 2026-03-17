@@ -29,10 +29,10 @@ export default function CabinetDetails() {
               </h2>
               <div className="space-y-6 text-[#393939] font-light leading-relaxed">
                 <p>
-                  l&apos;orthodontie va bien au-delà de l&apos;alignement dentaire et prend en compte l&apos;esthétique du sourire en harmonie avec le visage de nos patients.
+                  l'orthodontie va bien au-delà de l'alignement dentaire et prend en compte l'esthétique du sourire en harmonie avec le visage de nos patients.
                 </p>
                 <p>
-                  Nous accompagnons chaque patient avec une approche personnalisée, fondée sur l&apos;écoute, la précision et la compréhension globale de ses besoins, à chaque étape de son parcours de soin.
+                  Nous accompagnons chaque patient avec une approche personnalisée, fondée sur l'écoute, la précision et la compréhension globale de ses besoins, à chaque étape de son parcours de soin.
                 </p>
               </div>
             </div>
@@ -46,7 +46,7 @@ export default function CabinetDetails() {
               NOTRE VISION
             </span>
             <p className="text-[#393939] font-light leading-relaxed">
-              Corriger un sourire, c&apos;est aussi améliorer la posture, la fonction masticatoire, la respiration et la qualité de vie. Nous vous accompagnons à tout âge avec des solutions personnalisées, évolutives et adaptées à votre développement.
+              Corriger un sourire, c'est aussi améliorer la posture, la fonction masticatoire, la respiration et la qualité de vie. Nous vous accompagnons à tout âge avec des solutions personnalisées, évolutives et adaptées à votre développement.
             </p>
           </div>
           <div>
@@ -54,7 +54,7 @@ export default function CabinetDetails() {
               NOTRE ENGAGEMENT
             </span>
             <p className="text-[#393939] font-light leading-relaxed">
-              Offrir un suivi attentif et clair, expliquer chaque étape du traitement et proposer des solutions en adéquation avec les avancées actuelles de l&apos;orthodontie. Parce qu&apos;un sourire vaut plus que mille mots.
+              Offrir un suivi attentif et clair, expliquer chaque étape du traitement et proposer des solutions en adéquation avec les avancées actuelles de l'orthodontie. Parce qu'un sourire vaut plus que mille mots.
             </p>
           </div>
         </div>
@@ -69,10 +69,10 @@ export default function CabinetDetails() {
           </h3>
           <div className="max-w-3xl space-y-8 text-[#393939] font-light leading-relaxed">
             <p>
-              Chaque traitement est pensé sur mesure, dans un cadre où le dialogue, la pédagogie et l&apos;exigence clinique sont essentiels pour construire une relation durable avec nos patients. L&apos;accompagnement est personnalisé, afin que chaque patient se sente en confiance tout au long de son parcours.
+              Chaque traitement est pensé sur mesure, dans un cadre où le dialogue, la pédagogie et l'exigence clinique sont essentiels pour construire une relation durable avec nos patients. L'accompagnement est personnalisé, afin que chaque patient se sente en confiance tout au long de son parcours.
             </p>
             <p>
-              Aussi, l&apos;intégration d&apos;outils digitaux avancés permet de vous offrir une expérience plus confortable et de garantir des résultats précis et durables.
+              Aussi, l'intégration d'outils digitaux avancés permet de vous offrir une expérience plus confortable et de garantir des résultats précis et durables.
             </p>
           </div>
         </div>

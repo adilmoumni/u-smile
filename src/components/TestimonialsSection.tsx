@@ -11,7 +11,7 @@ const testimonials = [
     role: "Chirurgien-dentiste",
   },
   {
-    text: "Une formation marquée par une grande générosité dans le partage d&apos;expérience, bien au-delà du programme annoncé.",
+    text: "Une formation marquée par une grande générosité dans le partage d'expérience, bien au-delà du programme annoncé.",
     author: "Dr Malika",
     role: "Orthodontiste",
   },
@@ -21,12 +21,12 @@ const testimonials = [
     role: "Chirurgien-dentiste",
   },
   {
-    text: "Je n&apos;utilisais pas les aligneurs chez l&apos;enfant avant cette formation. Les cas présentés m&apos;ont permis d&apos;en comprendre les indications et de les intégrer en toute sécurité.",
+    text: "Je n'utilisais pas les aligneurs chez l'enfant avant cette formation. Les cas présentés m'ont permis d'en comprendre les indications et de les intégrer en toute sécurité.",
     author: "Dr Idriss",
     role: "Chirurgien-dentiste",
   },
   {
-    text: "La prise en charge orthodontique de l&apos;enfant est abordée avec une grande justesse, notamment sur la croissance et le bon timing thérapeutique.",
+    text: "La prise en charge orthodontique de l'enfant est abordée avec une grande justesse, notamment sur la croissance et le bon timing thérapeutique.",
     author: "Dr Rita",
     role: "Chirurgien-dentiste",
   },
@@ -36,28 +36,48 @@ const testimonials = [
     role: "Chirurgien-dentiste",
   },
   {
-    text: "L&apos;approche de Dr Bennis est profondément bienveillante. Elle prend le temps d&apos;accompagner chaque praticien, dans un climat à la fois exigeant et respectueux.",
+    text: "L'approche de Dr Bennis est profondément bienveillante. Elle prend le temps d'accompagner chaque praticien, dans un climat à la fois exigeant et respectueux.",
     author: "Dr Nabil",
     role: "Chirurgien-dentiste",
   },
   {
-    text: "La formation met en lumière l&apos;apport du numérique tout en rappelant clairement que l&apos;outil reste au service du clinicien. La planification demeure une décision médicale guidée par l&apos;expertise de l&apos;orthodontiste.",
+    text: "La formation met en lumière l'apport du numérique tout en rappelant clairement que l'outil reste au service du clinicien. La planification demeure une décision médicale guidée par l'expertise de l'orthodontiste.",
     author: "Dr Ouafae",
     role: "Orthodontiste",
   },
   {
-    text: "La digitalisation est abordée comme un véritable outil de précision clinique. Les flux numériques présentés permettent d&apos;optimiser le diagnostic et la planification, tout en gardant une maîtrise totale du traitement.",
+    text: "La digitalisation est abordée comme un véritable outil de précision clinique. Les flux numériques présentés permettent d'optimiser le diagnostic et la planification, tout en gardant une maîtrise totale du traitement.",
     author: "Dr Moulay",
     role: "Orthodontiste",
   },
   {
-    text: "L&apos;approche numérique enseignée améliore clairement l&apos;expérience patient : meilleure compréhension du traitement, suivi plus fluide et communication plus efficace, sans jamais perdre la dimension humaine du soin.",
+    text: "L'approche numérique enseignée améliore clairement l'expérience patient : meilleure compréhension du traitement, suivi plus fluide et communication plus efficace, sans jamais perdre la dimension humaine du soin.",
     author: "Dr Saâd",
     role: "Chirurgien-dentiste",
   },
 ];
 
-export default function TestimonialsSection() {
+const temoignagesHomePage = [
+  {
+    text: "Superbe expérience au cabinet Usmile chez dr bennis.\nJ'avais un problème de mâchoire et d'alignement \n Grâce à la technique des mini vices et Invisalign sans passer par la chirurgie mon sourire a été transformé grâce au dr bennis(professionnalisme et accompagnement à 100%) ",
+    author: "Nouhayla lyoubi",
+    role: ''
+  }, {
+    text: "Un grand merci au cabinet du Dr Charafa Bennis. L’accueil est chaleureux, le personnel très humain et à l’écoute. On se sent accompagné avec beaucoup de professionnalisme et de bienveillance. Je recommande vivement !",
+    author: "Ghita aqallal",
+    role: ""
+  }, {
+    text: "J’ai suivi un traitement Invisalign pour corriger une mâchoire très avancée, et le résultat a été obtenu sans aucune extraction, uniquement grâce aux gouttières . Cela demande quand même rigueur et sérieux, mais le résultat en vaut la peine. Pour ma part, je recommande vivement docteur Bennis Charafa : c’est la meilleure à Casablanca.",
+    author: "Benazzouz samar",
+    role: ""
+  }, {
+    text: "Le traitement Invisalign réalisé à la clinique U Smile a été une révélation !\nUne belle transformation dentaire avec des résultats rapides.\nDr Bennis est très professionnelle et suit de prêt ses patients ce qui permet d’optimiser le traitement.\nMerci à toute l’équipe U Smile pour cette belle aventure.",
+    author: "Ghita el harouchi",
+    role: ""
+  }
+]
+
+export default function TestimonialsSection({ isTemoignages = false }) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
@@ -68,6 +88,8 @@ export default function TestimonialsSection() {
     }
   };
 
+  const list = isTemoignages ? temoignagesHomePage : testimonials;
+
   return (
     <section id="testimonials" className="bg-[#fdfcfb] py-24 lg:py-32 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -76,7 +98,7 @@ export default function TestimonialsSection() {
             TÉMOIGNAGES
           </span>
           <h2 className="text-4xl sm:text-5xl font-light text-dark-taupe leading-tight">
-            Témoignages Participants
+            {isTemoignages ? "Nos patients satistfaits" : "Nos participants satisfaits"}
           </h2>
         </div>
 
@@ -87,20 +109,20 @@ export default function TestimonialsSection() {
             className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-12"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
-            {testimonials.map((t, idx) => (
+            {list.map((t, idx) => (
               <div
                 key={idx}
                 className="min-w-full sm:min-w-[450px] lg:min-w-[600px] snap-center rounded-xl p-8 lg:p-12 bg-[#F4F5F7] relative flex flex-col justify-between"
               >
                 <div className="absolute top-10 left-10">
-                 <Image
-                 src="/images/icon/quote.svg"
-                 alt="quote"
-                 width={56}
-                 height={47}
-                 />
+                  <Image
+                    src="/images/icon/quote.svg"
+                    alt="quote"
+                    width={56}
+                    height={47}
+                  />
                 </div>
-                
+
                 <div className="relative z-10 pt-14">
                   <p className="text-lg lg:text-xl text-[#393939] leading-relaxed font-light mb-10">
                     &ldquo; {t.text} &rdquo;

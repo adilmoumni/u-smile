@@ -60,10 +60,10 @@ export default function NosEquipements() {
                         </h2>
                         <div className="space-y-6 text-[#393939] font-light leading-relaxed mt-15">
                            <p>
-                              Les technologies numériques de dernière génération sont intégrées pour offrir des diagnostics plus précis, des traitements mieux maîtrisés et un meilleur confort pour le patient. La digitalisation permet d&apos;limiter les approximations liées aux techniques analogiques et de sécuriser chaque étape du soin.
+                              Les technologies numériques de dernière génération sont intégrées pour offrir des diagnostics plus précis, des traitements mieux maîtrisés et un meilleur confort pour le patient. La digitalisation permet d'limiter les approximations liées aux techniques analogiques et de sécuriser chaque étape du soin.
                            </p>
                            <p>
-                              Utilisés comme des outils d&apos;aide à la décision, ces équipements contribuent à des traitements plus fiables, plus prévisibles et à une réduction des risques d&apos;erreurs, tout en plaçant l&apos;expertise clinique au cœur de la prise en charge.
+                              Utilisés comme des outils d'aide à la décision, ces équipements contribuent à des traitements plus fiables, plus prévisibles et à une réduction des risques d'erreurs, tout en plaçant l'expertise clinique au cœur de la prise en charge.
                            </p>
                         </div>
                      </div>

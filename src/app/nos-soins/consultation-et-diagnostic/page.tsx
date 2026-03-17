@@ -12,26 +12,26 @@ const techFeatures = [
     title: "QR Code Smile View",
     description: "L'outil Smile View vous permet de découvrir une première simulation de votre sourire en seulement 60 secondes avant même de commencer le traitement, pour vous aider à vous projeter en toute sérénité.",
     note: "cette simulation est réalisée par l'IA.",
-    image: "/images/cabinet/smile-view.jpeg",
+    image: "/images/qr.png",
     icon: <Smartphone className="w-5 h-5" />
   },
   {
     title: "Scanner iTero",
     description: "Il permet de réaliser une empreinte dentaire 3D rapide, précise et confortable, sans pâte. Il offre une analyse digitale fiable de la dentition, facilitant le diagnostic et un échange clair et concret entre le praticien et le patient.",
-    image: "/images/cabinet/itero-action.jpeg",
+    image: "/itoro.png",
     icon: <Microscope className="w-5 h-5" />
   },
   {
     title: "L'outcome Simulator",
     description: "Il offre une simulation dentaire du résultat potentiel en se basant sur le scan 3D via iTero®, renforçant ainsi la qualité du diagnostic et la prévisibilité du traitement.",
     note: "cette simulation est réalisée par l'IA.",
-    image: "/images/cabinet/outcome-simulator.jpeg",
+    image: "/simulator.png",
     icon: <ShieldCheck className="w-5 h-5" />
   },
   {
     title: "L'outil ClinCheck Pro 6.0",
     description: "Ce logiciel permet à l’orthodontiste de planifier le traitement orthodontique en 3D, étape par étape, en y apportant toute son expertise clinique. Un 2ème rendez-vous vous sera proposé afin de visualiser votre sourire Final réel et discuter des différentes options de traitement.",
-    image: "/images/cabinet/clincheck.jpeg",
+    image: "/clincheck.png",
     icon: <Monitor className="w-5 h-5" />
   }
 ];

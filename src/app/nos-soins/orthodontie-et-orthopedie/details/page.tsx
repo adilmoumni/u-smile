@@ -66,26 +66,26 @@ export default function OrthodontieDetailsPage() {
             </div>
 
             <div className="bg-white border border-gray-100 rounded-[2.5rem] p-8 lg:p-12 shadow-sm">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className="relative h-[300px] lg:h-[400px]">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div className="relative h-[300px] lg:h-[500px] lg:col-span-5">
                   <Image
-                    src="/images/cabinet/itero-action.jpeg"
+                    src="/mom.png"
                     alt="Prévention orthodontique"
                     fill
                     className="object-cover"
-                    style={{ borderRadius: '1.5rem 1.5rem 12rem 1.5rem' }}
+                    style={{ borderRadius: '0rem 10rem 0rem 10rem' }}
                   />
                 </div>
-                <div className="space-y-6">
+                <div className="space-y-6 lg:col-span-7">
                   <p className="text-[#393939]/80 font-light text-lg">
-                    <span className="font-bold">Chez U.smile Orthodontie,</span> la prévention orthodontique débute très tôt et fait partie intégrante de la sensibilisation réalisée en consultation. Certaines fonctions influencent directement la croissance des mâchoires — la fonction crée l&apos;organe.
+                    <span className="font-bold">Chez U.smile Orthodontie,</span> la prévention orthodontique débute très tôt et fait partie intégrante de la sensibilisation réalisée en consultation. Certaines fonctions influencent directement la croissance des mâchoires — la fonction crée l'organe.
                   </p>
                   <p className="text-[#393939]/80 font-light text-lg italic border-t border-gray-100 pt-6">
                     Lors des consultations, une attention particulière est portée à :
                   </p>
                   <ul className="space-y-4 text-[#393939]/80 font-light text-lg">
                     <li>
-                      <span className="font-bold">• L&apos;allaitement</span>, qui favorise un développement harmonieux des mâchoires et de la musculature oro-faciale, par opposition à une succion artificielle prolongée.
+                      <span className="font-bold">• L'allaitement</span>, qui favorise un développement harmonieux des mâchoires et de la musculature oro-faciale, par opposition à une succion artificielle prolongée.
                     </li>
                     <li>
                       <span className="font-bold">• La respiration nasale</span>, indispensable à une croissance équilibrée du visage et à une bonne posture.
@@ -95,7 +95,7 @@ export default function OrthodontieDetailsPage() {
                     </li>
                   </ul>
                   <p className="text-[#393939]/70 text-base italic mt-8">
-                    Un dépistage précoce permet d&apos;agir à temps et de limiter l&apos;apparition de troubles plus complexes.
+                    Un dépistage précoce permet d'agir à temps et de limiter l'apparition de troubles plus complexes.
                   </p>
                 </div>
               </div>
@@ -120,26 +120,26 @@ export default function OrthodontieDetailsPage() {
             </div>
 
             <div className="bg-white border border-gray-100 rounded-[2.5rem] p-8 lg:p-12 shadow-sm">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className="relative h-[300px] lg:h-[400px] lg:order-2">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div className="relative h-[300px] lg:h-[500px] lg:col-span-5 lg:order-1">
                   <Image
-                    src="/images/cabinet/treatment-room.png"
+                    src="/images/firefy.png"
                     alt="Traitement pédiatrique"
                     fill
                     className="object-cover"
-                    style={{ borderRadius: '1.5rem 1.5rem 1.5rem 12rem' }}
+                    style={{ borderRadius: '0rem 10rem 0rem 10rem' }}
                   />
                 </div>
-                <div className="space-y-6 lg:order-1">
+                <div className="space-y-6 lg:col-span-7 lg:order-1">
                   <p className="text-[#393939]/80 font-light text-lg leading-relaxed">
-                    Chez l&apos;enfant, l&apos;orthodontie repose sur une approche interceptive, combinant : un volet dentaire, visant à aménager l&apos;espace pour l&apos;éruption des dents permanentes et à prévenir des extractions ultérieures, un volet squelettique (orthopédie dento-faciale), permettant de corriger les décalages de croissance des mâchoires.
+                    Chez l'enfant, l'orthodontie repose sur une approche interceptive, combinant : un volet dentaire, visant à aménager l'espace pour l'éruption des dents permanentes et à prévenir des extractions ultérieures, un volet squelettique (orthopédie dento-faciale), permettant de corriger les décalages de croissance des mâchoires.
                   </p>
                   <div className="space-y-4 pt-6 border-t border-gray-100">
                     <p className="font-bold text-[#393939] text-lg">
                       Le traitement est généralement réalisé en deux phases :
                     </p>
                     <p className="text-[#393939]/80 font-light text-lg">
-                      une 1ère phase chez l&apos;enfant à partir de 7-8 ans pour guider et accompagner la croissance, puis une 2ème phase de traitement à l&apos;adolescence (après l&apos;arrivée de toutes les dents permanentes) pour finaliser l&apos;alignement dentaire et coordonner les deux mâchoires entre elles.
+                      une 1ère phase chez l'enfant à partir de 7-8 ans pour guider et accompagner la croissance, puis une 2ème phase de traitement à l'adolescence (après l'arrivée de toutes les dents permanentes) pour finaliser l'alignement dentaire et coordonner les deux mâchoires entre elles.
                     </p>
                   </div>
                   <div className="pt-6">
@@ -167,25 +167,25 @@ export default function OrthodontieDetailsPage() {
               <div className="flex flex-col">
                 <span className="text-[#393939]/60 text-sm font-bold uppercase tracking-wider">Pédiatrique, Enfant & Adolescent</span>
                 <h2 className="text-3xl lg:text-4xl font-light text-[#393939] font-serif">
-                  Traitement de l&apos;adolescent
+                  Traitement de l'adolescent
                 </h2>
               </div>
             </div>
 
             <div className="bg-white border border-gray-100 rounded-[2.5rem] p-8 lg:p-12 shadow-sm">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className="relative h-[300px] lg:h-[400px]">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div className="relative h-[300px] lg:h-[500px] lg:col-span-5">
                   <Image
-                    src="/images/cabinet/smile-view.jpeg"
+                    src="/images/teen.jpg"
                     alt="Traitement adolescent"
                     fill
                     className="object-cover"
-                    style={{ borderRadius: '1.5rem 12rem 1.5rem 1.5rem' }}
+                    style={{ borderRadius: '0rem 10rem 0rem 10rem' }}
                   />
                 </div>
-                <div className="space-y-10">
+                <div className="space-y-10 lg:col-span-7">
                   <p className="text-[#393939]/80 font-light text-lg">
-                    À l&apos;adolescence, la croissance est à son maximal mais commence à se ralentir dès l&apos;âge de 13-14ans, mais reste toujours active. À cet âge, le traitement orthodontique se fait en une seule phase, visant à corriger simultanément : l&apos;alignement des dents, et les déséquilibres squelettiques présents.
+                    À l'adolescence, la croissance est à son maximal mais commence à se ralentir dès l'âge de 13-14ans, mais reste toujours active. À cet âge, le traitement orthodontique se fait en une seule phase, visant à corriger simultanément : l'alignement des dents, et les déséquilibres squelettiques présents.
                   </p>
 
                   <div className="space-y-4">
@@ -195,12 +195,12 @@ export default function OrthodontieDetailsPage() {
                       <span className="font-bold">• Appareillage fixes</span> multi-attaches auto ligaturantes nouvelle génération associés si nécessaire à des activateurs de croissance,
                     </p>
                     <p className="text-[#393939]/80 font-light text-lg">
-                      <span className="font-bold">• Aligneurs Invisalign Teen</span>, intégrant des fonctionnalités spécifiques permettant la correction des problèmes squelettiques en même temps que l&apos;alignement dentaire.
+                      <span className="font-bold">• Aligneurs Invisalign Teen</span>, intégrant des fonctionnalités spécifiques permettant la correction des problèmes squelettiques en même temps que l'alignement dentaire.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="mt-12 bg-gray-50 p-8 rounded-2xl italic text-[#393939]/80 text-center font-light leading-relaxed">
+              <div className="mt-12 p-8 text-[#393939]/80 text-center font-light">
                 Une attention particulière est également portée à la réhabilitation fonctionnelle (respiration, posture linguale, déglutition, mauvaises habitudes), essentielle pour assurer la stabilité des résultats dans le temps.
               </div>
             </div>
@@ -218,7 +218,7 @@ export default function OrthodontieDetailsPage() {
                 height={60}
               />
               <h2 className="text-4xl lg:text-5xl font-light text-white font-serif">
-                Orthodontie de l&apos;Adulte
+                Orthodontie de l'Adulte
               </h2>
             </div>
 
@@ -235,8 +235,8 @@ export default function OrthodontieDetailsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-32 text-white/90 font-light text-lg leading-relaxed">
               <div className="space-y-8">
                 <p>
-                  Les dents peuvent être déplacées orthodontiquement à tout âge, à condition que l&apos;os et les gencives soient sains.
-                  L&apos;orthodontie de l&apos;adulte permet de corriger les malpositions dentaires, de rétablir l&apos;esthétique du sourire et de préserver ainsi la santé bucco-dentaire à long terme.
+                  Les dents peuvent être déplacées orthodontiquement à tout âge, à condition que l'os et les gencives soient sains.
+                  L'orthodontie de l'adulte permet de corriger les malpositions dentaires, de rétablir l'esthétique du sourire et de préserver ainsi la santé bucco-dentaire à long terme.
                 </p>
               </div>
               <div className="space-y-10">
@@ -248,7 +248,7 @@ export default function OrthodontieDetailsPage() {
                   <p><span className="font-bold italic">• Appareillages fixes</span> à multi-attaches auto-ligaturantes nouvelle génération en céramique transparente,</p>
                 </div>
                 <p className="text-sm italic text-white/70">
-                  Un choix éclairé pourra être effectué en tenant compte des contraintes professionnelles, esthétiques et fonctionnelles propres à chaque patient adulte. Lorsque des décalages squelettiques importants sont présents, et que le patient souhaite les corriger, nous pouvons faire appel à une chirurgie orthognatique avec une préparation orthodontique préalable afin d&apos;optimiser le résultat fonctionnel et esthétique global.
+                  Un choix éclairé pourra être effectué en tenant compte des contraintes professionnelles, esthétiques et fonctionnelles propres à chaque patient adulte. Lorsque des décalages squelettiques importants sont présents, et que le patient souhaite les corriger, nous pouvons faire appel à une chirurgie orthognatique avec une préparation orthodontique préalable afin d'optimiser le résultat fonctionnel et esthétique global.
                 </p>
               </div>
             </div>
@@ -283,20 +283,20 @@ export default function OrthodontieDetailsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-32 text-white/90 font-light text-lg leading-relaxed">
               <div className="space-y-8">
                 <p>
-                  Chez le patient senior, l&apos;orthodontie permet de corriger les migrations dentaires liées au temps, et s&apos;inscrit dans une démarche de santé globale dont les objectifs principaux sont :
+                  Chez le patient senior, l'orthodontie permet de corriger les migrations dentaires liées au temps, et s'inscrit dans une démarche de santé globale dont les objectifs principaux sont :
                 </p>
               </div>
               <div className="space-y-10">
                 <div className="space-y-4">
-                  <p><span className="font-bold italic">• L&apos;esthétique du sourire</span> et l&apos;insertion sociale</p>
-                  <p><span className="font-bold italic">• Le réalignement des dents</span> afin de faciliter l&apos;hygiène bucco-dentaire, de mieux répartir les forces masticatoires et de limiter les surcharges sur certaines dents ou restaurations existantes assurant le maintien des dents sur les arcades</p>
+                  <p><span className="font-bold italic">• L'esthétique du sourire</span> et l'insertion sociale</p>
+                  <p><span className="font-bold italic">• Le réalignement des dents</span> afin de faciliter l'hygiène bucco-dentaire, de mieux répartir les forces masticatoires et de limiter les surcharges sur certaines dents ou restaurations existantes assurant le maintien des dents sur les arcades</p>
                 </div>
                 <p className="text-base italic text-white/70">
-                  Ces ajustements contribuent à préserver la santé des dents et des gencives, tout en favorisant une alimentation plus équilibrée. L&apos;orthodontie peut également accompagner ou préparer des réhabilitations prothétiques, en créant des conditions optimales pour la pose de couronnes, de bridges ou d&apos;implants.
+                  Ces ajustements contribuent à préserver la santé des dents et des gencives, tout en favorisant une alimentation plus équilibrée. L'orthodontie peut également accompagner ou préparer des réhabilitations prothétiques, en créant des conditions optimales pour la pose de couronnes, de bridges ou d'implants.
                 </p>
                 <div className="pt-6 border-t border-white/10">
                   <p className="text-white/80 text-base leading-relaxed">
-                    Grâce aux techniques d&apos;orthodontie moderne, les traitements chez le senior utilisent des forces douces et contrôlées, avec des durées optimisées, généralement limitées à quelques mois, afin d&apos;assurer efficacité, confort et stabilité.
+                    Grâce aux techniques d'orthodontie moderne, les traitements chez le senior utilisent des forces douces et contrôlées, avec des durées optimisées, généralement limitées à quelques mois, afin d'assurer efficacité, confort et stabilité.
                   </p>
                 </div>
               </div>

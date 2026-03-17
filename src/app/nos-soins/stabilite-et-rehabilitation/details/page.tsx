@@ -38,7 +38,7 @@ export default function StabiliteDetailsPage() {
                   </p>
                   <p className="text-[#393939]/80 font-light text-lg leading-relaxed">
                     Selon les besoins, la contention est assurée par des gouttières nocturnes,
-                    <span className="font-bold"> type Vivera®</span> ou gouttières thermoformées, et complétée par des fils de contentions collés à l&apos;intérieur des incisives.
+                    <span className="font-bold"> type Vivera®</span> ou gouttières thermoformées, et complétée par des fils de contentions collés à l'intérieur des incisives.
                   </p>
                   <p className="text-[#393939]/80 font-light text-lg leading-relaxed">
                     Ces fils sont conçus sur mesure, avec une plieuse de fil de contention de dernière génération, assurant précision, confort et fiabilité afin de garantir une stabilité optimale à long terme.
@@ -80,7 +80,7 @@ export default function StabiliteDetailsPage() {
                     En corrigeant ces déséquilibres, elle participe activement à la stabilité orthodontique, au confort du patient et à la santé globale du système oro-facial.
                   </p>
                   <p className="text-[#393939]/80 font-light text-lg leading-relaxed">
-                    Cette approche complète permet d&apos;inscrire le traitement dans une vision intégrative et préventive.
+                    Cette approche complète permet d'inscrire le traitement dans une vision intégrative et préventive.
                   </p>
                 </div>
                 <div className="order-2 lg:col-span-5 relative h-[350px] lg:h-[450px]">

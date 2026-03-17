@@ -23,12 +23,12 @@ export default function Home() {
             {/* Left – Text Side (Taupe) */}
             <div className="flex-1 p-10 lg:pl-20 lg:pr-10 flex flex-col justify-center relative z-10">
               <div className="animate-fade-in-up">
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl text-white mb-8 leading-[1.1] font-normal not-italic">
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl text-white mb-8 leading-[1.1] font-light not-italic">
                   <span className="block whitespace-nowrap">Votre plus beau</span>
                   <span className="block whitespace-nowrap">
                     <span className="italic font-semibold">Smile</span> commence
                   </span>
-                  <span className="block whitespace-nowrap">Avec nous</span>
+                  <span className="block whitespace-nowrap">avec nous</span>
                 </h1>
                 
                 <p className="text-white/90 text-lg lg:text-xl font-light max-w-md mb-12 leading-relaxed">
@@ -39,7 +39,7 @@ export default function Home() {
                   href="#about"
                   className="group inline-flex items-center gap-4 bg-[#393939] text-white px-6 py-2 rounded-xl text-sm font-semibold uppercase tracking-widest hover:bg-black transition-all duration-300 shadow-xl shadow-black/10 hover:shadow-black/20"
                 >
-                  A PROPOS
+                  À PROPOS
                   <svg 
                     className="w-5 h-5 transition-transform group-hover:translate-x-1" 
                     fill="none" 
@@ -73,7 +73,8 @@ export default function Home() {
       <AppointmentForm />
       <TeamSection />
       <ServicesSection />
-      <TestimonialsSection />
+
+      <TestimonialsSection isTemoignages />
 
       <Footer />
     </>
