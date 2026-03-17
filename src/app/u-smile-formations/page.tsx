@@ -125,7 +125,7 @@ export default function FormationsPage() {
 
                   <div className="flex justify-end mt-8">
                     <a
-                      href="mailto:contact@usmile.com"
+                      href="mailto:Usmileorthodontie@gmail.com"
                       className="bg-[#393939] text-white px-6 py-3 rounded-lg text-sm font-semibold tracking-wider flex items-center gap-2 hover:bg-[#2a2a2a] transition-all duration-300 uppercase"
                     >
                       EN SAVOIR PLUS
@@ -166,7 +166,7 @@ export default function FormationsPage() {
 
                   <div className="flex justify-start mt-8">
                     <a
-                      href="mailto:contact@usmile.com"
+                      href="mailto:Usmileorthodontie@gmail.com"
                       className="bg-[#393939] text-white px-6 py-3 rounded-lg text-sm font-semibold tracking-wider flex items-center gap-2 hover:bg-[#2a2a2a] transition-all duration-300 uppercase"
                     >
                       EN SAVOIR PLUS

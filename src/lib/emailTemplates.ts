@@ -99,7 +99,7 @@ export const getUserEmailTemplate = (data: any) => `
     <div class="footer">
       <p><a href="https://maps.app.goo.gl/MsMVt8btA8Sv8cDC8?g_st=aw" style="color: #ffffff; text-decoration: none;">6 Rue Abou Zaid Eddaboussi, Vélodrome, Casablanca</a></p>
       <p><a href="https://maps.app.goo.gl/jLKrRiRUNE5VBKVdA?g_st=iw" style="color: #ffffff; text-decoration: none;">Rés Malak 4 – 1er Étage Bureau N° 15 – Bouskoura Ville Verte</a></p>
-      <div style="margin-top: 20px; color: #96928E;">(212) 700-722556 | contact@usmile.com</div>
+      <div style="margin-top: 20px; color: #96928E;">(212) 700-722556 | Usmileorthodontie@gmail.com</div>
     </div>
   </div>
 </body>

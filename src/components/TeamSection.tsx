@@ -8,9 +8,11 @@ interface DoctorProfileProps {
   bio: string[];
   image: string;
   isReversed?: boolean;
+  imageClassName?: string;
+  containerClassName?: string;
 }
 
-function DoctorProfile({ name, titles, bio, image, isReversed }: DoctorProfileProps) {
+function DoctorProfile({ name, titles, bio, image, isReversed, imageClassName, containerClassName }: DoctorProfileProps) {
   // Split name into first part and second part for the serif styling
   const nameParts = name.split(" ");
   const firstName = nameParts.slice(0, 2).join(" "); // e.g., "Dr Charafa" or "Dr Lina"
@@ -20,13 +22,13 @@ function DoctorProfile({ name, titles, bio, image, isReversed }: DoctorProfilePr
     <div className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 py-20 ${isReversed ? 'lg:flex-row-reverse' : ''}`}>
       {/* Left: Image with Stylized U */}
       <div className="relative w-full lg:w-1/2 flex justify-center">
-        <div className="relative w-full max-w-[500px] aspect-[4/5] lg:aspect-[3/4]">
+        <div className={`relative w-full aspect-[4/5] lg:aspect-[3/4] overflow-hidden ${containerClassName || 'max-w-[500px]'}`}>
           {/* Doctor Portrait */}
           <Image
             src={image}
             alt={name}
             fill
-            className="object-contain object-bottom hover:scale-105 transition-transform duration-700"
+            className={`object-contain object-bottom transition-transform duration-700 ${imageClassName || 'hover:scale-105'}`}
             sizes="(max-width: 768px) 100vw, 50vw"
           />
 
@@ -95,7 +97,9 @@ export default function TeamSection({ doctorName }: { doctorName?: string }) {
         "Forte de plus de trois années d’expérience au sein de U.smile Orthodontie à Casa Anfa, elle s’inscrit dans la continuité d’une orthodontie d’excellence, moderne et personnalisée, où innovation technologique et exigence clinique avancent de pair."
       ],
       image: "/images/team/dr-lina.png",
-      isReversed: false
+      isReversed: false,
+      containerClassName: "max-w-[550px] lg:max-w-[600px]",
+      imageClassName: "scale-[1.15] translate-y-[0%] origin-bottom"
     }
   ];
 
