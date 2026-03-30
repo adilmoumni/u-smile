@@ -58,16 +58,16 @@ export default function Header() {
       }`}
     >
       {/* ── Top Info Bar ── */}
-      <div className="bg-[#96928E] text-white text-[10px] sm:text-xs">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
+      <div className="bg-[#96928E] text-white text-xs sm:text-sm">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
           {/* Phone numbers */}
-          <div className="flex items-center gap-3 sm:gap-5">
+          <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-6 gap-y-1">
             <a
               href="tel:+212700722556"
               className="flex items-center gap-1.5 hover:text-white transition-colors"
             >
               <svg
-                className="w-3.5 h-3.5"
+                className="w-4 h-4"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -81,11 +81,11 @@ export default function Header() {
               </svg>
               (212) 700-722556
             </a>
-            <span className="hidden sm:flex items-center gap-1.5 text-white/50 uppercase tracking-wider">
+            <span className="flex items-center gap-1.5 text-white/50 uppercase tracking-wider">
               Fixe
               <a
                 href="tel:+212522396210"
-                className="text-white/80 normal-case hover:text-white transition-colors"
+                className="text-white normal-case hover:text-white transition-colors"
               >
                 (212) 522-396210
               </a>
@@ -95,7 +95,7 @@ export default function Header() {
           {/* Business hours */}
           <div className="hidden md:flex items-center gap-2">
             <svg
-              className="w-3.5 h-3.5"
+              className="w-4 h-4"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -118,28 +118,28 @@ export default function Header() {
 
       {/* ── Main Navigation Bar ── */}
       <nav className="bg-white border-b border-foreground/5">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-5">
           {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
               src="/images/logos/logo-u-smile.svg"
               alt="U-Smile Orthodontie"
-              width={140}
-              height={70}
+              width={180}
+              height={90}
               priority
-              className="lg:w-[150px] lg:h-[70px]"
+              className="lg:w-[220px] lg:h-[95px]"
             />
           </Link>
 
           {/* Desktop nav links */}
-          <div className="hidden lg:flex items-center gap-2 xl:gap-4">
+          <div className="hidden lg:flex items-center gap-1 xl:gap-2">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.label}
                   href={link.href}
-                  className={`px-4 py-2 text-[12px] font-medium uppercase tracking-[0.05em] transition-all duration-300 rounded-lg ${
+                  className={`px-3 xl:px-4 py-2.5 text-[12px] xl:text-[13px] font-medium uppercase tracking-[0.05em] transition-all duration-300 rounded-lg whitespace-nowrap ${
                     isActive 
                       ? "bg-black text-white" 
                       : "text-black hover:text-accent"
@@ -197,8 +197,8 @@ export default function Header() {
               <Image
                 src="/images/logos/logo-u-smile.svg"
                 alt="U-Smile Orthodontie"
-                width={140}
-                height={40}
+                width={180}
+                height={60}
               />
             </div>
             {navLinks.map((link) => {
@@ -263,6 +263,25 @@ export default function Header() {
                     />
                   </svg>
                   (212) 700-722556
+                </a>
+                <a
+                  href="tel:+212522396210"
+                  className="flex items-center gap-2.5 text-sm text-white/80 hover:text-white transition-colors"
+                >
+                  <svg
+                    className="w-4 h-4 shrink-0 text-white/50"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                    />
+                  </svg>
+                  <span className="text-white/50 uppercase tracking-wider text-[10px] mr-1">Fixe</span> (212) 522-396210
                 </a>
                 <a
                   href="mailto:Usmileorthodontie@gmail.com"
