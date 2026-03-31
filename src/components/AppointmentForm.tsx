@@ -186,7 +186,6 @@ export default function AppointmentForm() {
                       <option value="" disabled>Choisir le lieu</option>
                       <option value="bouskora">Bouskoura</option>
                       <option value="velodrome">Vélodrome Casablanca</option>
-                      <option value="both">Bouskoura & Vélodrome</option>
                     </select>
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-dark-taupe/40">
                       <ChevronDown className="w-4 h-4" />

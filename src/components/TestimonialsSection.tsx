@@ -97,7 +97,7 @@ export default function TestimonialsSection({ isTemoignages = false }) {
         <div className="mb-16">
           <SectionBadge title="TÉMOIGNAGES" className="mb-6" />
           <h2 className="text-4xl sm:text-5xl font-light text-dark-taupe leading-tight">
-            {isTemoignages ? "Nos patients satistfaits" : "Nos participants satisfaits"}
+            {isTemoignages ? "Nos patients satisfaits" : "Nos participants satisfaits"}
           </h2>
         </div>
 
